@@ -1,0 +1,2 @@
+# FitFood
+ An App that prioritizes the utilization of personal data to offer personalized solutions, thereby facilitating users' health goals more effectively and conveniently. The app will provide food and exercise recommendations based on the user's Body Mass Index (BMI). 
