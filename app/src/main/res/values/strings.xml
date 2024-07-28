@@ -17,9 +17,9 @@
     <string name="title_welcome_page">Welcome to dicoStory!</string>
     <string name="title_signup_page">Welcome 👋</string>
     <string name="title_form_page">Enter your data</string>
-    <string name="email">Email</string>
-    <string name="password">Password</string>
-    <string name="message_login_page">Log in to your account to continue</string>
+    <string name="email">Enter Your Email</string>
+    <string name="password">Enter Your Password</string>
+    <string name="message_login_page">Enter your email and password</string>
     <string name="massage_signup_page">Please enter your data</string>
     <string name="gender">Gender</string>
     <string name="gender_man">Male</string>
@@ -27,7 +27,7 @@
     <string name="birth_date">Date of Birth</string>
     <string name="weight">Weight (kg)</string>
     <string name="height">Height (cm)</string>
-    <string name="title_login_page">Welcome back 👋</string>
+    <string name="title_login_page">Welcome back</string>
     <string name="name">Name</string>
     <string name="message_main_page">Happy Learning at Dicoding.</string>
     <string name="greeting">Hello %1$s,</string>
@@ -89,7 +89,7 @@
 
     <string name="title_artikel">Pola Hidup Sehat Untuk Menjaga Berat Badan Ideal</string>
     <string name="desc_artikel">Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia.</string>
-    <string name="title_artikel_page">Sedang Trending</string>
+    <string name="title_artikel_page">Article Recommendations</string>
 
 
     <string name="berat_sasaran_title">Masukan Berat Sasaran</string>
@@ -172,6 +172,7 @@
     <string name="message_input_height">Enter your height in cm</string>
     <string name="message_input_weight">Enter your weight in kg</string>
     <string name="input_bmi">Input Your Height and Weight</string>
+    <string name="search_article">Search for articles</string>
 
 </resources>
 

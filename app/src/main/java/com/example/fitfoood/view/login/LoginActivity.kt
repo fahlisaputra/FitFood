@@ -27,9 +27,9 @@ class LoginActivity : AppCompatActivity() {
         viewModel = ViewModelFactory.getInstance(this).create(LoginViewModel::class.java)
         setContentView(binding.root)
 
-        binding.forgotPassword.setOnClickListener {
-            startActivity(Intent(this, ForgotPassActivity::class.java))
-        }
+//        (binding.forgotPassword.setOnClickListener {
+//            startActivity(Intent(this, ForgotPassActivity::class.java))
+//        })
 
         setupView()
         setupAction()
