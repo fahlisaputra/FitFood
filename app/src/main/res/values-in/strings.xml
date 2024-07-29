@@ -15,7 +15,7 @@
     <string name="login">Masuk</string>
     <string name="message_welcome_page">Tempat berbagi keseruan sesama pengguna Dicoding</string>
     <string name="title_welcome_page">Selamat datang di dicoStory!</string>
-    <string name="title_signup_page">Selamat datang 👋</string>
+    <string name="title_signup_page">Silahkan Isi Data Diri Anda</string>
     <string name="title_form_page">Masukan data diri Anda</string>
     <string name="email">Masukkan Email Anda</string>
     <string name="password">Masukkan Password Anda</string>
@@ -28,7 +28,7 @@
     <string name="weight">Berat (kg)</string>
     <string name="height">Tinggi (cm)</string>
     <string name="title_login_page">Selamat Datang Kembali</string>
-    <string name="name">Nama</string>
+    <string name="name">Masukkan Nama Anda</string>
     <string name="message_main_page">Selamat Belajar di Dicoding.</string>
     <string name="greeting">Halo %1$s,</string>
     <string name="logout">Keluar</string>
@@ -141,7 +141,7 @@
     <string name="resend">Kirim Ulang Kode Konfirmasi</string>
     <string name="title_new_pass">Kata Sandi Baru</string>
     <string name="message_new_pass">Silahkan masukkan kata sandi baru Anda.</string>
-    <string name="confirm_password">Konfirmasi Kata Sandi</string>
+    <string name="confirm_password">Ulangi Password Anda</string>
     <string name="or_sign_in_with">- Atau masuk dengan -</string>
     <string name="or_sign_up_with">- Atau daftar dengan -</string>
     <string name="profile_name">"Nama Profil"</string>
@@ -170,5 +170,7 @@
     <string name="message_input_weight">Masukkan berat badan Anda</string>
     <string name="message_input_height">Masukkan tinggi badan Anda</string>
     <string name="input_bmi">Masukan Berat dan Tinggi Anda</string>
+    <string name="search_article">Cari artikel</string>
+    <string name="message_signup_page">Isi data anda jika belum registrasi</string>
 
 </resources>

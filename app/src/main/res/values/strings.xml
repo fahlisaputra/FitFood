@@ -15,7 +15,7 @@
     <string name="login">Login</string>
     <string name="message_welcome_page">A place to share the excitement among Dicoding users</string>
     <string name="title_welcome_page">Welcome to dicoStory!</string>
-    <string name="title_signup_page">Welcome 👋</string>
+    <string name="title_signup_page">Please Fill In Your Personal Data</string>
     <string name="title_form_page">Enter your data</string>
     <string name="email">Enter Your Email</string>
     <string name="password">Enter Your Password</string>
@@ -27,12 +27,12 @@
     <string name="birth_date">Date of Birth</string>
     <string name="weight">Weight (kg)</string>
     <string name="height">Height (cm)</string>
-    <string name="title_login_page">Welcome back</string>
-    <string name="name">Name</string>
+    <string name="title_login_page">Welcome Back</string>
+    <string name="name">Enter Your Name</string>
     <string name="message_main_page">Happy Learning at Dicoding.</string>
     <string name="greeting">Hello %1$s,</string>
     <string name="logout">Logout</string>
-    <string name="dont_have_account">Dont have an account?</string>
+    <string name="dont_have_account">Don\'t have an account?</string>
     <string name="password_repeat">Password Repeat</string>
     <string name="have_account">Already have an account?</string>
 
@@ -142,7 +142,7 @@
     <string name="resend">Resend Confirmation Code</string>
     <string name="title_new_pass">New Password</string>
     <string name="message_new_pass">Please write your new password.</string>
-    <string name="confirm_password">Confirm Password</string>
+    <string name="confirm_password">Repeat Your Password</string>
     <string name="or_sign_in_with">- Or sign in with -</string>
     <string name="or_sign_up_with">- Or sign up with -</string>
     <string name="profile_name">"Lucyta Qutsyaning "</string>
@@ -173,6 +173,7 @@
     <string name="message_input_weight">Enter your weight in kg</string>
     <string name="input_bmi">Input Your Height and Weight</string>
     <string name="search_article">Search for articles</string>
+    <string name="message_signup_page">Fill in your data if you haven\'t registered</string>
 
 </resources>
 
