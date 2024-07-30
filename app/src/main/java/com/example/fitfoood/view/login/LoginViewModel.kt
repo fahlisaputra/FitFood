@@ -9,7 +9,7 @@ import com.example.fitfoood.data.repository.AuthRepository
 import kotlinx.coroutines.launch
 
 class LoginViewModel(private val userRepository: UserRepository, private val authRepository: AuthRepository) : ViewModel() {
-    fun saveSession(user: UserModel) {
+    fun saveUser(user: UserModel) {
         viewModelScope.launch {
             userRepository.saveSession(user)
         }

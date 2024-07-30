@@ -10,7 +10,6 @@ import com.example.fitfoood.data.repository.ArticleRepository
 import com.example.fitfoood.data.repository.AuthRepository
 import com.example.fitfoood.data.repository.BMIRepository
 import com.example.fitfoood.data.repository.InternetRepository
-import com.example.fitfoood.data.source.ApiConfigUser
 import com.example.fitfoood.source.ApiConfig
 
 object Injection {

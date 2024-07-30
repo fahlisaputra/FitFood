@@ -3,6 +3,7 @@ package com.example.fitfoood.data.repository
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import com.example.fitfoood.data.ApiResponse
+import com.example.fitfoood.data.api.enqueueLiveData
 import com.example.fitfoood.data.response.ArticleResponse
 import com.example.fitfoood.data.response.ArtikelResponseItem
 import com.example.fitfoood.data.response.BMI
@@ -22,24 +23,8 @@ class ArticleRepository (
 ) {
     fun getArticles() : LiveData<ApiResponse<ArticleResponse>> {
         val result = MediatorLiveData<ApiResponse<ArticleResponse>>()
-        result.value = ApiResponse.Loading
         val client = apiService.getArticles()
-        client.enqueue(object : Callback<ArticleResponse> {
-            override fun onResponse(
-                call: Call<ArticleResponse>,
-                response: Response<ArticleResponse>
-            ) {
-                if (response.isSuccessful) {
-                    result.value = ApiResponse.Success(response.body()!!)
-                } else {
-                    result.value = ApiResponse.Error(response.message())
-                }
-            }
-
-            override fun onFailure(call: Call<ArticleResponse>, t: Throwable) {
-                result.value = ApiResponse.Error(t.message.toString())
-            }
-        })
+        client.enqueueLiveData(result)
         return result
     }
 

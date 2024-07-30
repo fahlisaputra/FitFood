@@ -1,47 +1,46 @@
 package com.example.fitfoood.data.repository
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.liveData
-import com.example.fitfood.data.source.ApiServiceUser
 import com.example.fitfoood.data.ApiResponse
-import com.example.fitfoood.data.RegisterRequest
+import com.example.fitfoood.data.api.enqueueLiveData
 import com.example.fitfoood.data.response.SignInResponse
-import com.example.fitfoood.data.response.UpdatUserResponse
 import com.example.fitfoood.data.response.UserResponse
-import com.example.fitfoood.data.response.UserUpdate
-import com.example.fitfoood.data.source.ApiServiceToken
 import com.example.fitfoood.source.ApiService
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
-import java.lang.Error
 
+/**
+ * Auth Repository
+ *
+ * @property apiService API Service
+ * @constructor Create Auth Repository instance
+ */
 class AuthRepository(
     private val apiService: ApiService,
 ) {
+
+    /**
+     * Sign in user
+     *
+     * @param email Email address
+     * @param password Password
+     * @return Sign In Response
+     */
     fun signIn(email: String, password: String): LiveData<ApiResponse<SignInResponse>> {
         val result = MutableLiveData<ApiResponse<SignInResponse>>()
-        result.value = ApiResponse.Loading
-
         val client = apiService.signIn(email, password)
-        client.enqueue(object : Callback<SignInResponse> {
-            override fun onResponse(
-                call: Call<SignInResponse>,
-                response: Response<SignInResponse>
-            ) {
-                if (response.isSuccessful) {
-                    result.value = ApiResponse.Success(response.body()!!)
-                } else {
-                    result.value = ApiResponse.Error(response.message())
-                }
-            }
+        client.enqueueLiveData(result)
+        return result
+    }
 
-            override fun onFailure(call: Call<SignInResponse>, t: Throwable) {
-                result.value = ApiResponse.Error(t.message.toString())
-            }
-        })
+    /**
+     * Get user data
+     *
+     * @return User Response
+     */
+    fun getUser(): LiveData<ApiResponse<UserResponse>> {
+        val result = MutableLiveData<ApiResponse<UserResponse>>()
+        val client = apiService.getUser()
+        client.enqueueLiveData(result)
         return result
     }
 
@@ -82,28 +81,4 @@ class AuthRepository(
 //        })
 //        return result
 //    }
-
-    fun getUser(): LiveData<ApiResponse<UserResponse>> {
-        val result = MutableLiveData<ApiResponse<UserResponse>>()
-        result.value = ApiResponse.Loading
-
-        val client = apiService.getUser()
-        client.enqueue(object : Callback<UserResponse> {
-            override fun onResponse(
-                call: Call<UserResponse>,
-                response: Response<UserResponse>
-            ) {
-                if (response.isSuccessful) {
-                    result.value = ApiResponse.Success(response.body()!!)
-                } else {
-                    result.value = ApiResponse.Error(response.message())
-                }
-            }
-
-            override fun onFailure(call: Call<UserResponse>, t: Throwable) {
-                result.value = ApiResponse.Error(t.message.toString())
-            }
-        })
-        return result
-    }
 }

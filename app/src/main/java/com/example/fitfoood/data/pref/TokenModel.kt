@@ -1,7 +1,14 @@
 package com.example.fitfoood.data.pref
 
-import com.example.fitfoood.data.response.DateOfBirth
-
+/**
+ * Token model
+ *
+ * This data class is used to define token model.
+ *
+ * @property accessToken Access token
+ * @property refreshToken Refresh token
+ * @constructor Create empty Token model
+ */
 data class TokenModel(
     val accessToken: String?,
     val refreshToken: String?

@@ -4,7 +4,6 @@ package com.example.fitfoood.view.login
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.Toast
@@ -118,7 +117,7 @@ class LoginActivity : AppCompatActivity() {
                         }
                     }else{
                         val user = result.data.data?.user
-                        viewModel.saveSession(
+                        viewModel.saveUser(
                             UserModel(
                                 user?.name,
                                 user?.email,
@@ -128,7 +127,6 @@ class LoginActivity : AppCompatActivity() {
                         startActivity(Intent(this, MainActivity::class.java))
                         return@observe
                     }
-
                 }
             }
         }

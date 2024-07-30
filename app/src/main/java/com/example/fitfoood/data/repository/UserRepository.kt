@@ -1,17 +1,11 @@
 package com.example.fitfoood.data.repository
-import android.content.Context
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.fitfood.data.source.ApiServiceUser
 import com.example.fitfoood.data.ApiResponse
 import com.example.fitfoood.data.pref.TokenModel
 import com.example.fitfoood.data.pref.UserModel
 import com.example.fitfoood.data.pref.UserPreference
-import com.example.fitfoood.data.pref.dataStore
 import com.example.fitfoood.data.response.SignInResponse
-import com.example.fitfoood.data.source.ApiConfigUser
-import com.example.fitfoood.data.source.ApiServiceToken
 import com.example.fitfoood.source.ApiService
 import kotlinx.coroutines.flow.Flow
 import retrofit2.Call
