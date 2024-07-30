@@ -1,12 +1,11 @@
 package com.example.fitfood.data.source
 
 import com.example.fitfoood.data.RegisterRequest
-import com.example.fitfoood.data.response.LoginResponse
+import com.example.fitfoood.data.response.SignInResponse
 import com.example.fitfoood.data.response.SignUpResponse
 import com.example.fitfoood.data.response.UpdatUserResponse
 import com.example.fitfoood.data.response.UserResponse
 import com.example.fitfoood.data.response.UserUpdate
-import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.*
@@ -14,11 +13,14 @@ import retrofit2.http.*
 interface ApiServiceUser {
 
     @FormUrlEncoded
-    @POST("api/login")
-    fun login(
+    @POST("v2/auth/sign-in")
+    fun signIn(
         @Field("email") email: String,
         @Field("password") password: String
-    ): Call<LoginResponse>
+    ): Call<SignInResponse>
+
+    @GET("v2/user")
+    fun getUser(): Call<UserResponse>
 
     @POST("api/register")
     suspend fun register(

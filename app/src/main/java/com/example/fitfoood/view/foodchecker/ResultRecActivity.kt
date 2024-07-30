@@ -32,17 +32,17 @@ class ResultRecActivity : AppCompatActivity() {
         }
 
         homeViewModel = ViewModelFactory.getInstance(this).create(HomeViewModel::class.java)
-        homeViewModel.getSessionBMI().observe(this){result->
-            bmiLabel = result.label
-            val recommendation = when {
-                bmiLabel == "underweight" && totalCalories in 500..700 -> "Recommended"
-                bmiLabel == "ideal" && totalCalories in 400..600 -> "Recommended"
-                bmiLabel == "overweight" && totalCalories in 300..500 -> "Recommended"
-                bmiLabel == "obesity" && totalCalories in 300..400 -> "Recommended"
-                else -> "Not Recommended"
-            }
-            binding.foodRec.text = recommendation
-        }
+//        homeViewModel.getSessionBMI().observe(this){result->
+//            bmiLabel = result.label
+//            val recommendation = when {
+//                bmiLabel == "underweight" && totalCalories in 500..700 -> "Recommended"
+//                bmiLabel == "ideal" && totalCalories in 400..600 -> "Recommended"
+//                bmiLabel == "overweight" && totalCalories in 300..500 -> "Recommended"
+//                bmiLabel == "obesity" && totalCalories in 300..400 -> "Recommended"
+//                else -> "Not Recommended"
+//            }
+//            binding.foodRec.text = recommendation
+//        }
 
     }
 

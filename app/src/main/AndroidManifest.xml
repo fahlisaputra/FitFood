@@ -12,6 +12,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
@@ -26,6 +27,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FitFood"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
 
         <activity
@@ -37,12 +39,12 @@
         <activity
             android:name=".view.forgotpass.ForgotPassActivity"
             android:exported="false" />
-        <activity
-            android:name=".view.reminder.AddReminderActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.reminder.ReminderActivity"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".view.reminder.AddReminderActivity"-->
+<!--            android:exported="false" />-->
+<!--        <activity-->
+<!--            android:name=".view.reminder.ReminderActivity"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".view.notification.NotificationActivity"
             android:exported="false" />

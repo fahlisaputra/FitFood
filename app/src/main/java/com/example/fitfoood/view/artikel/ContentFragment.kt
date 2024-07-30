@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.fitfoood.ArtikelAdapter
 import com.example.fitfoood.data.response.ArtikelResponseItem
 import com.example.fitfoood.databinding.FragmentContentBinding
 

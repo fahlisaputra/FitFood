@@ -88,26 +88,26 @@ class SignUpActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            viewModel.register(username, email, password, dateOfBirth, gender).observe(this) { result ->
-                when (result) {
-                    is ApiResponse.Success<*> -> {
-                        showSuccessDialog(email)
-                    }
-                    is ApiResponse.Error<*> -> {
-                        Log.d("SignUpActivity", "Error message: ${result.message}")
-                        runOnUiThread {
-                            if (result.message?.contains("Email already exists") == true) {
-                                Toast.makeText(this@SignUpActivity, "Email is already registered", Toast.LENGTH_SHORT).show()
-                            } else {
-                                Toast.makeText(this@SignUpActivity, "An error occurred: ${result.message}", Toast.LENGTH_SHORT).show()
-                            }
-                        }
-                    }
-                    ApiResponse.Loading -> {
-                        // Handle loading state if needed
-                    }
-                }
-            }
+//            viewModel.register(username, email, password, dateOfBirth, gender).observe(this) { result ->
+//                when (result) {
+//                    is ApiResponse.Success<*> -> {
+//                        showSuccessDialog(email)
+//                    }
+//                    is ApiResponse.Error<*> -> {
+//                        Log.d("SignUpActivity", "Error message: ${result.message}")
+//                        runOnUiThread {
+//                            if (result.message?.contains("Email already exists") == true) {
+//                                Toast.makeText(this@SignUpActivity, "Email is already registered", Toast.LENGTH_SHORT).show()
+//                            } else {
+//                                Toast.makeText(this@SignUpActivity, "An error occurred: ${result.message}", Toast.LENGTH_SHORT).show()
+//                            }
+//                        }
+//                    }
+//                    ApiResponse.Loading -> {
+//                        // Handle loading state if needed
+//                    }
+//                }
+//            }
         }
     }
 

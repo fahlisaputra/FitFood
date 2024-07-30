@@ -23,18 +23,18 @@ class WorkOutActivity : AppCompatActivity() {
 
          homeViewModel = ViewModelFactory.getInstance(this).create(HomeViewModel::class.java)
 
-         homeViewModel.getSession().observe(this) { user ->
-             token = user.token
-             homeViewModel.getSessionBMI().observe(this){result->
-                 bmiLabel = result.label
-                     if (bmiLabel == "") {
-                         bmiLabel = "ideal"
-                     }
-                     showRecycleList()
-                 binding.bmiHead.text = bmiLabel
-
-             }
-         }
+//         homeViewModel.getSession().observe(this) { user ->
+////             token = user.token
+//             homeViewModel.getSessionBMI().observe(this){result->
+//                 bmiLabel = result.label
+//                     if (bmiLabel == "") {
+//                         bmiLabel = "ideal"
+//                     }
+//                     showRecycleList()
+//                 binding.bmiHead.text = bmiLabel
+//
+//             }
+//         }
 
 
 
@@ -50,24 +50,24 @@ class WorkOutActivity : AppCompatActivity() {
      }
 
     private fun showRecycleList() {
-        homeViewModel.getWoRec(token).observe(this ){ response ->
-            when (response) {
-                is ApiResponse.Success -> {
-                    val list = response.data?.filter { it.label == bmiLabel }
-                    val adapter = WorkOutAdapter(list!!)
-                    binding.recyclerViewWorkOut.layoutManager =
-                        LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-                    binding.recyclerViewWorkOut.adapter = adapter
-                }
-
-                is ApiResponse.Error -> {
-                    // Show error message
-                }
-
-                is ApiResponse.Loading -> {
-                    // Show loading
-                }
-            }
-        }
+//        homeViewModel.getWoRec(token).observe(this ){ response ->
+//            when (response) {
+//                is ApiResponse.Success -> {
+//                    val list = response.data?.filter { it.label == bmiLabel }
+//                    val adapter = WorkOutAdapter(list!!)
+//                    binding.recyclerViewWorkOut.layoutManager =
+//                        LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+//                    binding.recyclerViewWorkOut.adapter = adapter
+//                }
+//
+//                is ApiResponse.Error -> {
+//                    // Show error message
+//                }
+//
+//                is ApiResponse.Loading -> {
+//                    // Show loading
+//                }
+//            }
+//        }
     }
 }

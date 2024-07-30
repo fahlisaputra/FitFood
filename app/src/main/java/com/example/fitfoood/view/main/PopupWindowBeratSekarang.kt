@@ -36,40 +36,40 @@ class PopupWindowBeratSekarang : DialogFragment() {
         super.onViewCreated(view, savedInstanceState)
         fragmentManager = parentFragmentManager
         homeViewModel = ViewModelFactory.getInstance(requireContext()).create(HomeViewModel::class.java)
-        homeViewModel.getSession().observe(viewLifecycleOwner) { user ->
-            token = user.token
-            userId = user.userId
-        }
-
-        homeViewModel.getSessionBMI().observe(viewLifecycleOwner) { bmi ->
-            this.height = bmi.height.toString()
-            val lastWeight = bmi.weight?.toIntOrNull() ?: 45
-            binding.textBbSasaran.text = "$lastWeight Kg"
-        }
-
-
-        binding.saveButton.setOnClickListener {
-            val berat = binding.textBbSasaran.text.toString().replace("Kg", "").trim()
-            homeViewModel.postBMI(token, userId, BMI()).observe(viewLifecycleOwner) { result ->
-                when (result) {
-                    is ApiResponse.Error -> {
-                        Toast.makeText(requireContext(), "Terjadi kesalahan : ${result.message}", Toast.LENGTH_SHORT).show()
-                    }
-                    ApiResponse.Loading -> {
-                    }
-                    is ApiResponse.Success -> {
-                        Toast.makeText(requireContext(), "Berhasil menyimpan berat", Toast.LENGTH_SHORT).show()
-                        dismiss()
-
-                        val profileFragment = ProfileFragment()
-                        fragmentManager.beginTransaction().apply {
-                            replace(R.id.fragment_container, profileFragment)
-                            commit()
-                        }
-                    }
-                }
-            }
-        }
+//        homeViewModel.getSession().observe(viewLifecycleOwner) { user ->
+////            token = user.token
+////            userId = user.userId
+//        }
+//
+//        homeViewModel.getSessionBMI().observe(viewLifecycleOwner) { bmi ->
+//            this.height = bmi.height.toString()
+//            val lastWeight = bmi.weight?.toIntOrNull() ?: 45
+//            binding.textBbSasaran.text = "$lastWeight Kg"
+//        }
+//
+//
+//        binding.saveButton.setOnClickListener {
+//            val berat = binding.textBbSasaran.text.toString().replace("Kg", "").trim()
+//            homeViewModel.postBMI(token, userId, BMI()).observe(viewLifecycleOwner) { result ->
+//                when (result) {
+//                    is ApiResponse.Error -> {
+//                        Toast.makeText(requireContext(), "Terjadi kesalahan : ${result.message}", Toast.LENGTH_SHORT).show()
+//                    }
+//                    ApiResponse.Loading -> {
+//                    }
+//                    is ApiResponse.Success -> {
+//                        Toast.makeText(requireContext(), "Berhasil menyimpan berat", Toast.LENGTH_SHORT).show()
+//                        dismiss()
+//
+//                        val profileFragment = ProfileFragment()
+//                        fragmentManager.beginTransaction().apply {
+//                            replace(R.id.fragment_container, profileFragment)
+//                            commit()
+//                        }
+//                    }
+//                }
+//            }
+//        }
 
         binding.plusBtn.setOnClickListener {
             updateWeightBy(1)

@@ -3,9 +3,10 @@ package com.example.fitfoood.view
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.fitfoood.data.repository.ArtikelRepository
+import com.example.fitfoood.data.repository.ArticleRepository
 import com.example.fitfoood.data.repository.AuthRepository
 import com.example.fitfoood.data.repository.BMIRepository
+import com.example.fitfoood.data.repository.InternetRepository
 import com.example.fitfoood.data.repository.UserRepository
 import com.example.fitfoood.di.Injection
 import com.example.fitfoood.view.forgotpass.ForgotViewModel
@@ -17,10 +18,11 @@ import com.example.fitfoood.view.signup.SignUpViewModel
 import com.example.fitfoood.view.splash.SplashViewModel
 
 class ViewModelFactory(
-    private val repository: ArtikelRepository,
+    private val repository: ArticleRepository,
     private val userRepository: UserRepository,
     private val authRepository: AuthRepository,
-    private val bmiRepository: BMIRepository
+    private val bmiRepository: BMIRepository,
+    private val internetRepository: InternetRepository
 ) : ViewModelProvider.NewInstanceFactory() {
 
     @Suppress("UNCHECKED_CAST")
@@ -30,7 +32,7 @@ class ViewModelFactory(
                 HomeViewModel(repository, userRepository, bmiRepository) as T
             }
             modelClass.isAssignableFrom(SplashViewModel::class.java) -> {
-                SplashViewModel(userRepository) as T
+                SplashViewModel(userRepository, internetRepository) as T
             }
             modelClass.isAssignableFrom(LoginViewModel::class.java) -> {
                 LoginViewModel(userRepository, authRepository) as T
@@ -63,7 +65,8 @@ class ViewModelFactory(
                         Injection.provideArtikelRepository(context),
                         Injection.provideUserRepository(context),
                         Injection.provideAuthRepository(context),
-                        Injection.provideBMIRRepository(context)
+                        Injection.provideBMIRRepository(context),
+                        Injection.provideInternetRepository(context)
                     )
                 }
             }
