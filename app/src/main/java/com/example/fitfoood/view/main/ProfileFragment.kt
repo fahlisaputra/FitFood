@@ -62,7 +62,7 @@ class ProfileFragment : Fragment(), View.OnClickListener {
             token = user.token
             val username = user.username
             idhealth = user.userId
-            binding.tvItem.text = username
+            binding.tvName.text = username
             fetchBMIData()
         }
 

@@ -84,7 +84,7 @@
 
     <string name="bb_awal_text">50 kg</string>
     <string name="bb_awal_desc">Berat Awal</string>
-    <string name="bb_sekarang_text">50 kg</string>
+    <string name="bb_sekarang_text">70kg</string>
     <string name="bb_sekarang_desc">Berat Saat Ini</string>
     <string name="bb_sasaran_text">50 kg</string>
     <string name="bb_sasaran_desc">Berat Sasaran</string>
@@ -97,14 +97,14 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="dummy_detail_desc_notif">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.\n</string>
-    <string name="account">Akun</string>
+    <string name="account">Akun Anda</string>
     <string name="dumb_name">Rayhan Wahyu</string>
     <string name="dumbEmail">rayhanwahyu@gmail.com</string>
     <string name="age">Umur</string>
     <string name="dummy_age">21</string>
     <string name="edit">Edit</string>
     <string name="eat_reminder">Pengingat Makan</string>
-    <string name="reminder">Pengingat</string>
+    <string name="reminder">Pengingat Anda</string>
     <string name="language">Bahasa</string>
     <string name="weight_scale_reminder">Pengingat Berat Badan</string>
     <string name="breakfast">Sarapan</string>
@@ -136,7 +136,7 @@
     <string name="confirm_mail">Konfirmasi Email</string>
     <string name="title_verifiy_email">Verifikasi Alamat Email</string>
     <string name="message_verify_email">Kode verifikasi dikirim ke</string>
-    <string name="dummy_email">rayhanwahyu@gmail.com</string> (This string can remain in English for demonstration purposes)
+    <string name="dummy_email">fitfoodrecomender@gmail.com</string> (This string can remain in English for demonstration purposes)
     <string name="confirm_code">Konfirmasi Kode</string>
     <string name="resend">Kirim Ulang Kode Konfirmasi</string>
     <string name="title_new_pass">Kata Sandi Baru</string>
@@ -161,7 +161,7 @@
     <string name="dummy_bmi">BMI 21</string>
     <string name="desc_bmi">Berat badan Anda kelebihan</string>
     <string name="tb_sekarang_desc">Tinggi Badan Saat Ini</string>
-    <string name="tb_sekarang_text">150 cm</string>
+    <string name="tb_sekarang_text">170cm</string>
     <string name="berat_sekarang_title">Masukkan berat badan saat ini</string>
     <string name="tb_sekarang_title">Masukkan tinggi badan saat ini</string>
     <string name="bb_sekarang_title">Masukkan berat badan saat ini</string>
@@ -172,5 +172,6 @@
     <string name="input_bmi">Masukan Berat dan Tinggi Anda</string>
     <string name="search_article">Cari artikel</string>
     <string name="message_signup_page">Isi data anda jika belum registrasi</string>
+    <string name="weight_tracker">Pelacak Berat Badan</string>
 
 </resources>

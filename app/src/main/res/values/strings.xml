@@ -82,7 +82,7 @@
 
     <string name="bb_awal_text">50 kg</string>
     <string name="bb_awal_desc">Initial Weight</string>
-    <string name="bb_sekarang_text">50 kg</string>
+    <string name="bb_sekarang_text">70kg</string>
     <string name="bb_sekarang_desc">Current Weight</string>
     <string name="bb_sasaran_text">50 kg</string>
 
@@ -104,14 +104,14 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="dummy_detail_desc_notif">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.</string>
-    <string name="account">Account</string>
+    <string name="account">Your Account</string>
     <string name="dumb_name">Rayhan Wahyu</string>
     <string name="dumbEmail">rayhanwahyu@gmail.com</string>
     <string name="age">Age</string>
     <string name="dummy_age">21</string>
     <string name="edit">Edit</string>
     <string name="eat_reminder">Meal Reminder</string>
-    <string name="reminder">Reminder</string>
+    <string name="reminder">Your Reminder</string>
     <string name="language">Language</string>
     <string name="weight_scale_reminder">Weight Reminder</string>
     <string name="breakfast">Breakfast</string>
@@ -137,7 +137,7 @@
     <string name="confirm_mail">Confirm Mail</string>
     <string name="title_verifiy_email">Verify Email Address</string>
     <string name="message_verify_email">Verification code sent to</string>
-    <string name="dummy_email">rayhanwahyu@gmail.com</string>
+    <string name="dummy_email">fitfoodrecomender@gmail.com</string>
     <string name="confirm_code">Confirm Code</string>
     <string name="resend">Resend Confirmation Code</string>
     <string name="title_new_pass">New Password</string>
@@ -145,7 +145,7 @@
     <string name="confirm_password">Repeat Your Password</string>
     <string name="or_sign_in_with">- Or sign in with -</string>
     <string name="or_sign_up_with">- Or sign up with -</string>
-    <string name="profile_name">"Lucyta Qutsyaning "</string>
+    <string name="profile_name">"Fit Food Recommend "</string>
     <string name="account_setting">Account Setting</string>
     <string name="account_edit">Edit Account</string>
     <string name="submit">Submit</string>
@@ -162,7 +162,7 @@
     <string name="dummy_bmi">BMI 21</string>
     <string name="desc_bmi">You are overweight</string>
     <string name="tb_sekarang_desc">Current Height</string>
-    <string name="tb_sekarang_text">150 cm</string>
+    <string name="tb_sekarang_text">170cm</string>
     <string name="berat_sekarang_title">Enter the current weight</string>
     <string name="tb_sekarang_title">Enter the current height</string>
     <string name="bb_sekarang_title">Enter the current weight</string>
@@ -174,6 +174,7 @@
     <string name="input_bmi">Input Your Height and Weight</string>
     <string name="search_article">Search for articles</string>
     <string name="message_signup_page">Fill in your data if you haven\'t registered</string>
+    <string name="weight_tracker">Weight Tracker</string>
 
 </resources>
 

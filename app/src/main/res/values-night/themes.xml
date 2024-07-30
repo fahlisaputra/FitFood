@@ -138,6 +138,37 @@
         <item name="color">@color/white</item>
     </style>
 
+    <style name="Heading1_SemiBold">
+        <item name="android:textSize">28sp</item>
+        <item name="fontFamily">@font/montserrat_semibold</item>
+        <item name="color">@color/black</item>
+    </style>
+    <style name="Heading2_SemiBold">
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/montserrat_semibold</item>
+        <item name="color">@color/black</item>
+    </style>
+    <style name="SubHeading1_SemiBold">
+        <item name="android:textSize">15sp</item>
+        <item name="fontFamily">@font/montserrat_semibold</item>
+        <item name="color">@color/black</item>
+    </style>
+    <style name="SubHeading2_SemiBold">
+        <item name="android:textSize">13sp</item>
+        <item name="fontFamily">@font/montserrat_semibold</item>
+        <item name="color">@color/black</item>
+    </style>
+    <style name="Body1_SemiBold">
+        <item name="android:textSize">13sp</item>
+        <item name="fontFamily">@font/montserrat_semibold</item>
+        <item name="color">@color/black</item>
+    </style>
+    <style name="Body2_SemiBold">
+        <item name="android:textSize">10sp</item>
+        <item name="fontFamily">@font/montserrat_semibold</item>
+        <item name="color">@color/black</item>
+    </style>
+
     <style name="Heading1_Poppins_Bold">
         <item name="android:textSize">28sp</item>
         <item name="fontFamily">@font/poppins_bold</item>
