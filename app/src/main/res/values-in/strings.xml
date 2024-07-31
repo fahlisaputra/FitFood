@@ -48,10 +48,10 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_activity_main">MainActivity</string>
 
-    <string name="guest_name">Hi, Lucy!</string>
-    <string name="guest_welcome">Selamat Datang</string>
+    <string name="guest_name">Hi, Zoe!</string>
+    <string name="guest_welcome">Selamat Datang di FitFood</string>
     <string name="bmi_card">Berat Badan Ideal</string>
-    <string name="bmi_desc">Pastikan asupan kalori sesuai dengan kebutuhan kalori harian.</string>
+    <string name="bmi_desc">Pastikan asupan kalori Anda memenuhi kebutuhan kalori harian Anda.</string>
     <string name="recomend_for_you">Rekomendasi untuk kamu</string>
 
     <string name="dummy_artikel_headline">Pola Hidup Sehat Untuk Menjaga Berat Badan Ideal</string>
@@ -159,6 +159,7 @@
     <string name="total_calories">Total Kalori</string>
     <string name="recommendation_result">Hasil Rekomendasi</string>
     <string name="dummy_bmi">BMI 21</string>
+    <string name="dummy_bmi_home">BMI : 21</string>
     <string name="desc_bmi">Berat badan Anda kelebihan</string>
     <string name="tb_sekarang_desc">Tinggi Badan Saat Ini</string>
     <string name="tb_sekarang_text">170cm</string>
@@ -173,5 +174,9 @@
     <string name="search_article">Cari artikel</string>
     <string name="message_signup_page">Isi data anda jika belum registrasi</string>
     <string name="weight_tracker">Pelacak Berat Badan</string>
+    <string name="take_picture">Take Picture</string>
+    <string name="detection_process">Detection Process</string>
+    <string name="calorie_detection_results">Calorie Detection Results</string>
+    <string name="try_now">Try Now</string>
 
 </resources>
