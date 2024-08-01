@@ -59,20 +59,6 @@ class AuthRepository(
         return result
     }
 
-//    fun userRegister(username: String, email: String, password: String, dateOfBirth: String,gender:String) = liveData {
-//        emit(ApiResponse.Loading)
-//        try {
-//            val response = apiService.register(RegisterRequest(username, email, password, dateOfBirth,gender))
-//            if (response.isSuccessful) {
-//                emit(ApiResponse.Success(response.body()))
-//            } else {
-//                emit(Error(response.message()))
-//            }
-//        } catch (e: Exception) {
-//            emit(Error(e.message))
-//        }
-//    }
-
 //    fun updateUser( idUser:String,userUpdate:UserUpdate): LiveData<ApiResponse<UpdatUserResponse>> {
 //        val result = MutableLiveData<ApiResponse<UpdatUserResponse>>()
 //        result.value = ApiResponse.Loading
