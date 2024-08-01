@@ -4,7 +4,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.fitfoood.data.ApiResponse
 import com.example.fitfoood.data.api.enqueueLiveData
+import com.example.fitfoood.data.request.SignUpRequestData
 import com.example.fitfoood.data.response.SignInResponse
+import com.example.fitfoood.data.response.SignUpResponse
 import com.example.fitfoood.data.response.UserResponse
 import com.example.fitfoood.source.ApiService
 
@@ -40,6 +42,19 @@ class AuthRepository(
     fun getUser(): LiveData<ApiResponse<UserResponse>> {
         val result = MutableLiveData<ApiResponse<UserResponse>>()
         val client = apiService.getUser()
+        client.enqueueLiveData(result)
+        return result
+    }
+
+    /**
+     * Sign up user
+     *
+     * @param payload Sign Up Request Data
+     * @return Sign Up Response
+     */
+    fun signUp(payload: SignUpRequestData): LiveData<ApiResponse<SignUpResponse>> {
+        val result = MutableLiveData<ApiResponse<SignUpResponse>>()
+        val client = apiService.signUp(payload)
         client.enqueueLiveData(result)
         return result
     }

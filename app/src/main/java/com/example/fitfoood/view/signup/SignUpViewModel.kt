@@ -5,6 +5,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.fitfoood.data.pref.UserModel
 import com.example.fitfoood.data.repository.AuthRepository
 import com.example.fitfoood.data.repository.UserRepository
+import com.example.fitfoood.data.request.SignUpRequestData
 import kotlinx.coroutines.launch
 
 class SignUpViewModel(private val userRepository: UserRepository, private val authRepository: AuthRepository) : ViewModel() {
@@ -13,7 +14,5 @@ class SignUpViewModel(private val userRepository: UserRepository, private val au
             userRepository.saveSession(user)
         }
     }
-
-//    fun register(username: String, email: String, password: String, dateOfBirth: String,gender:String) =
-//        authRepository.userRegister(username, email, password, dateOfBirth,gender)
+    fun signUp(payload: SignUpRequestData) = authRepository.signUp(payload)
 }

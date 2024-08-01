@@ -1,5 +1,6 @@
 package com.example.fitfoood.source
 
+import com.example.fitfoood.data.request.SignUpRequestData
 import com.example.fitfoood.data.response.ArticleResponse
 import com.example.fitfoood.data.response.ArtikelResponseItem
 import com.example.fitfoood.data.response.BMI
@@ -8,6 +9,7 @@ import com.example.fitfoood.data.response.FoodBMIResponseItem
 import com.example.fitfoood.data.response.GetBMIResponse
 import com.example.fitfoood.data.response.PostBMIResponse
 import com.example.fitfoood.data.response.SignInResponse
+import com.example.fitfoood.data.response.SignUpResponse
 import com.example.fitfoood.data.response.UserResponse
 import com.example.fitfoood.data.response.WoBMIResponseItem
 import retrofit2.Call
@@ -28,6 +30,11 @@ interface ApiService {
         @Field("email") email: String,
         @Field("password") password: String
     ): Call<SignInResponse>
+
+    @POST("v2/auth/sign-up")
+    fun signUp(
+        @Body payload: SignUpRequestData
+    ): Call<SignUpResponse>
 
     @GET("v2/user")
     fun getUser(): Call<UserResponse>

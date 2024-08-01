@@ -3,19 +3,21 @@ package com.example.fitfoood.data.response
 import com.google.gson.annotations.SerializedName
 
 data class SignUpResponse(
+	@field:SerializedName("message")
+	val message : String,
 
 	@field:SerializedName("data")
-	val data: Data? = null,
-
-	@field:SerializedName("message")
-	val message: String? = null,
-
-	@field:SerializedName("status")
-	val status: String? = null
+	val data: SignUpResponseData
 )
 
-data class Data(
+data class SignUpResponseData(
 
-	@field:SerializedName("userId")
-	val userId: String? = null
+	@field:SerializedName("id")
+	val id: String,
+
+	@field:SerializedName("name")
+	val name: String,
+
+	@field:SerializedName("email")
+	val email: String,
 )

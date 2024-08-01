@@ -15,6 +15,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.fitfoood.R
 import com.example.fitfoood.data.ApiResponse
+import com.example.fitfoood.data.request.SignUpProfileData
+import com.example.fitfoood.data.request.SignUpRequestData
 import com.example.fitfoood.databinding.ActivitySignUpBinding
 import com.example.fitfoood.view.ViewModelFactory
 import com.example.fitfoood.view.login.LoginActivity
@@ -43,9 +45,9 @@ class SignUpActivity : AppCompatActivity() {
 
         binding.genderRadioGroup.setOnCheckedChangeListener { group, checkedId ->
             gender = if (checkedId == R.id.radioMan) {
-                "Male"
+                "male"
             } else {
-                "Female"
+                "female"
             }
         }
 
@@ -78,6 +80,10 @@ class SignUpActivity : AppCompatActivity() {
             val confirmPassword = binding.passwordRepeatEditText.text.toString()
             val dateOfBirth = dateBirth
 
+            // TODO: Bind this variable value to the layout
+            val height = 164
+            val weight = 67
+
             if (username.isBlank() || email.isBlank() || password.isBlank() || confirmPassword.isBlank() || dateOfBirth.isBlank() || gender.isBlank()) {
                 Toast.makeText(this, "All fields are required", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
@@ -88,26 +94,39 @@ class SignUpActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-//            viewModel.register(username, email, password, dateOfBirth, gender).observe(this) { result ->
-//                when (result) {
-//                    is ApiResponse.Success<*> -> {
-//                        showSuccessDialog(email)
-//                    }
-//                    is ApiResponse.Error<*> -> {
-//                        Log.d("SignUpActivity", "Error message: ${result.message}")
-//                        runOnUiThread {
-//                            if (result.message?.contains("Email already exists") == true) {
-//                                Toast.makeText(this@SignUpActivity, "Email is already registered", Toast.LENGTH_SHORT).show()
-//                            } else {
-//                                Toast.makeText(this@SignUpActivity, "An error occurred: ${result.message}", Toast.LENGTH_SHORT).show()
-//                            }
-//                        }
-//                    }
-//                    ApiResponse.Loading -> {
-//                        // Handle loading state if needed
-//                    }
-//                }
-//            }
+            val payload = SignUpRequestData(
+                name = username,
+                email = email,
+                password = password,
+                profile = SignUpProfileData(
+                    gender = gender,
+                    birthDate = dateOfBirth,
+                    height = height,
+                    weight = weight
+                )
+            )
+
+            viewModel.signUp(payload).observe(this) { result ->
+                when (result) {
+                    is ApiResponse.Success<*> -> {
+                        showSuccessDialog(email)
+                    }
+                    is ApiResponse.Error<*> -> {
+                        Log.d("SignUpActivity", "Error message: ${result.message}")
+                        runOnUiThread {
+                            if (result.message?.contains("Email already used") == true) {
+                                Toast.makeText(this@SignUpActivity, "Email is already registered", Toast.LENGTH_SHORT).show()
+                            } else {
+                                Toast.makeText(this@SignUpActivity, "An error occurred: ${result.message}", Toast.LENGTH_SHORT).show()
+                            }
+                        }
+                    }
+                    ApiResponse.Loading -> {
+                        // Handle loading state if needed
+                    }
+                }
+            }
+
         }
     }
 
