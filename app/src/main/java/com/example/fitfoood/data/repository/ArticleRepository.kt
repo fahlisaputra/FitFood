@@ -21,6 +21,13 @@ import retrofit2.Response
 class ArticleRepository (
     private val apiService: ApiService
 ) {
+
+    /**
+     * Fetch articles from API
+     *
+     * @return Article Response
+     * @see ArticleResponse for more information
+     */
     fun getArticles() : LiveData<ApiResponse<ArticleResponse>> {
         val result = MediatorLiveData<ApiResponse<ArticleResponse>>()
         val client = apiService.getArticles()
@@ -28,30 +35,6 @@ class ArticleRepository (
         return result
     }
 
-//    fun getAllArticle(token: String): LiveData<ApiResponse<List<ArtikelResponseItem>>> {
-//        val result = MediatorLiveData<ApiResponse<List<ArtikelResponseItem>>>()
-//        result.value = ApiResponse.Loading
-//        val ArticlesApiService =ApiConfig.getApiService()
-//        val client = ArticlesApiService.getAllArticle("Bearer $token")
-//        client.enqueue(object : Callback<List<ArtikelResponseItem>> {
-//            override fun onResponse(
-//                call: Call<List<ArtikelResponseItem>>,
-//                response: Response<List<ArtikelResponseItem>>
-//            ) {
-//                if (response.isSuccessful) {
-//                    result.value = ApiResponse.Success(response.body()!!)
-//                } else {
-//                    result.value = ApiResponse.Error(response.message())
-//                }
-//            }
-//
-//            override fun onFailure(call: Call<List<ArtikelResponseItem>>, t: Throwable) {
-//                result.value = ApiResponse.Error(t.message.toString())
-//            }
-//        })
-//        return result
-//    }
-//
 //    fun getBMI(token: String, idhealth: String): LiveData<ApiResponse<GetBMIResponse>> {
 //        val result = MediatorLiveData<ApiResponse<GetBMIResponse>>()
 //        result.value = ApiResponse.Loading
