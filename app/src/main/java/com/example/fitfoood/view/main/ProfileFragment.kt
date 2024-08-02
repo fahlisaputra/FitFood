@@ -58,13 +58,13 @@ class ProfileFragment : Fragment(), View.OnClickListener {
 
         homeViewModel = ViewModelFactory.getInstance(requireContext()).create(HomeViewModel::class.java)
 
-        homeViewModel.getSession().observe(viewLifecycleOwner) { user ->
-            token = user.token
-            val username = user.username
-            idhealth = user.userId
-            binding.tvName.text = username
-            fetchBMIData()
-        }
+//        homeViewModel.getSession().observe(viewLifecycleOwner) { user ->
+////            token = user.token
+////            val username = user.username
+////            idhealth = user.userId
+////            binding.tvItem.text = username
+//            fetchBMIData()
+//        }
 
         binding.cardViewAccount.setOnClickListener(this)
         binding.cardViewReminder.setOnClickListener(this)
@@ -86,36 +86,36 @@ class ProfileFragment : Fragment(), View.OnClickListener {
     }
 
     private fun fetchBMIData() {
-        homeViewModel.getBMI(token, idhealth).observe(viewLifecycleOwner, Observer { result ->
-            when (result) {
-                is ApiResponse.Error -> {
-                    // Handle error state if needed
-                }
-                is ApiResponse.Loading -> {
-                    // Handle loading state if needed
-                }
-                is ApiResponse.Success -> {
-                    val bmiData = result.data?.data?.firstOrNull()
-                    if (bmiData != null) {
-                        binding.bbSekarangText.text = bmiData.weight.toString()
-                        binding.tbSekarangText.text = bmiData.height.toString()
-                        val formattedBmiUser = String.format("%.2f", bmiData.bmiUser)
-                        binding.bmiNumber.text = "BMI = $formattedBmiUser"
-                        binding.descBMI.text = bmiData.label
-
-                        // Save BMI session
-                        homeViewModel.saveSessionBMI(
-                            BMIModel(
-                                bmiData.weight.toString(),
-                                bmiData.height.toString(),
-                                bmiData.bmiUser.toString(),
-                                bmiData.label.toString()
-                            )
-                        )
-                    }
-                }
-            }
-        })
+//        homeViewModel.getBMI(token, idhealth).observe(viewLifecycleOwner, Observer { result ->
+//            when (result) {
+//                is ApiResponse.Error -> {
+//                    // Handle error state if needed
+//                }
+//                is ApiResponse.Loading -> {
+//                    // Handle loading state if needed
+//                }
+//                is ApiResponse.Success -> {
+//                    val bmiData = result.data?.data?.firstOrNull()
+//                    if (bmiData != null) {
+//                        binding.bbSekarangText.text = bmiData.weight.toString()
+//                        binding.tbSekarangText.text = bmiData.height.toString()
+//                        val formattedBmiUser = String.format("%.2f", bmiData.bmiUser)
+//                        binding.bmiNumber.text = "BMI = $formattedBmiUser"
+//                        binding.descBMI.text = bmiData.label
+//
+//                        // Save BMI session
+//                        homeViewModel.saveSessionBMI(
+//                            BMIModel(
+//                                bmiData.weight.toString(),
+//                                bmiData.height.toString(),
+//                                bmiData.bmiUser.toString(),
+//                                bmiData.label.toString()
+//                            )
+//                        )
+//                    }
+//                }
+//            }
+//        })
     }
 
     override fun onClick(v: View?) {

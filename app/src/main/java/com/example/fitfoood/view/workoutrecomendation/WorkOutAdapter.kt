@@ -1,19 +1,11 @@
 package com.example.fitfoood.view.workoutrecomendation
 
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.fitfoood.ArtikelAdapter
-import com.example.fitfoood.data.response.ArtikelResponseItem
 import com.example.fitfoood.data.response.WoBMIResponseItem
-import com.example.fitfoood.databinding.ArtikelRowBinding
-import com.example.fitfoood.databinding.FoodRowBinding
 import com.example.fitfoood.databinding.WoRowBinding
-import com.example.fitfoood.view.artikel.DetailArtikelActivity
-import com.example.fitfoood.view.foodrecomendation.FoodAdapter
-import com.example.fitfoood.view.foodrecomendation.FoodItem
 
 class WorkOutAdapter (private val woList: List<WoBMIResponseItem>) : RecyclerView.Adapter<WorkOutAdapter.ViewHolder>() {
 

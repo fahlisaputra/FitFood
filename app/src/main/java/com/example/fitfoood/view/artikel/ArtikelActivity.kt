@@ -14,7 +14,6 @@ import com.example.fitfoood.ArtikelAdapter
 import com.example.fitfoood.data.ApiResponse
 import com.example.fitfoood.data.response.ArtikelResponseItem
 import com.example.fitfoood.databinding.ActivityArtikelBinding
-import com.example.fitfoood.view.ViewModelFactory
 import com.example.fitfoood.view.main.HomeViewModel
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
@@ -35,20 +34,20 @@ class ArtikelActivity : AppCompatActivity() {
         token= "Your Token Here"
 
          // Gantikan dengan token Anda
-        homeViewModel = ViewModelFactory.getInstance(this).create(HomeViewModel::class.java)
-        homeViewModel.getSession().observe(this) { user ->
-            token = user.token
-        }
-
-        homeViewModel.getSessionBMI().observe(this){result->
-            label = result.label
-            if(label == "") {
-                label = "ideal"
-            }
-
-            showRecyclerList()
-            fetchArticles()
-        }
+//        homeViewModel = ViewModelFactory.getInstance(this).create(HomeViewModel::class.java)
+//        homeViewModel.getSession().observe(this) { user ->
+////            token = user.token
+//        }
+//
+//        homeViewModel.getSessionBMI().observe(this){result->
+//            label = result.label
+//            if(label == "") {
+//                label = "ideal"
+//            }
+//
+//            showRecyclerList()
+//            fetchArticles()
+//        }
 //        setupViewPager()
 
         val searchView = findViewById<SearchView>(com.example.fitfoood.R.id.searchView)
@@ -88,54 +87,54 @@ class ArtikelActivity : AppCompatActivity() {
     }
 
     private fun fetchArticles() {
-        homeViewModel.getAllArticles(token).observe(this, Observer { artikel ->
-            when (artikel) {
-                is ApiResponse.Success -> {
-                    articles = artikel.data ?: listOf()
-                    articles = articles.filter { it.aticleLabel == label }
-                    if(tabLayoutMediator == null){
-                        tabLayoutMediator = TabLayoutMediator(binding.tabLayout, binding.viewPager, true, true){tab, position ->
-                            tab.setText(tabTitles[position])
-                        }
-                        val sectionsPagerAdapter = SectionsPagerAdapter(supportFragmentManager, articles)
-                        binding.viewPager.adapter = sectionsPagerAdapter
-                        tabLayoutMediator!!.attach()
-                    }else{
-
-                        (binding.viewPager.adapter as SectionsPagerAdapter).updateArticles(articles)
-                    }
-                }
-                is ApiResponse.Error -> {
-                    // Handle error
-                }
-                is ApiResponse.Loading -> {
-                    // Show loading
-                }
-            }
-        })
+//        homeViewModel.getAllArticles(token).observe(this, Observer { artikel ->
+//            when (artikel) {
+//                is ApiResponse.Success -> {
+//                    articles = artikel.data ?: listOf()
+//                    articles = articles.filter { it.aticleLabel == label }
+//                    if(tabLayoutMediator == null){
+//                        tabLayoutMediator = TabLayoutMediator(binding.tabLayout, binding.viewPager, true, true){tab, position ->
+//                            tab.setText(tabTitles[position])
+//                        }
+//                        val sectionsPagerAdapter = SectionsPagerAdapter(supportFragmentManager, articles)
+//                        binding.viewPager.adapter = sectionsPagerAdapter
+//                        tabLayoutMediator!!.attach()
+//                    }else{
+//
+//                        (binding.viewPager.adapter as SectionsPagerAdapter).updateArticles(articles)
+//                    }
+//                }
+//                is ApiResponse.Error -> {
+//                    // Handle error
+//                }
+//                is ApiResponse.Loading -> {
+//                    // Show loading
+//                }
+//            }
+//        })
     }
 
     private fun showRecyclerList() {
-        homeViewModel.getAllArticles(token).observe(this, Observer { artikel ->
-            when (artikel) {
-                is ApiResponse.Success -> {
-                    var list = artikel.data ?: listOf()
-                    list = list.filter { it.aticleLabel == label }
-                    val adapter = ArtikelAdapter(list)
-                    with(binding.recyclerView) {
-                        layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-                        setHasFixedSize(true)
-                        this.adapter = adapter
-                    }
-                }
-                is ApiResponse.Error -> {
-                    // Handle error
-                }
-                is ApiResponse.Loading -> {
-                    // Show loading
-                }
-            }
-        })
+//        homeViewModel.getAllArticles(token).observe(this, Observer { artikel ->
+//            when (artikel) {
+//                is ApiResponse.Success -> {
+//                    var list = artikel.data ?: listOf()
+//                    list = list.filter { it.aticleLabel == label }
+//                    val adapter = ArtikelAdapter(list)
+//                    with(binding.recyclerView) {
+//                        layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+//                        setHasFixedSize(true)
+//                        this.adapter = adapter
+//                    }
+//                }
+//                is ApiResponse.Error -> {
+//                    // Handle error
+//                }
+//                is ApiResponse.Loading -> {
+//                    // Show loading
+//                }
+//            }
+//        })
     }
 
     private val tabTitles = arrayOf("All", "Hidup Sehat", "Olahraga")

@@ -11,11 +11,13 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fitfoood.MainActivity
 import com.example.fitfoood.data.ApiResponse
+import com.example.fitfoood.data.pref.TokenModel
 import com.example.fitfoood.data.pref.UserModel
 import com.example.fitfoood.databinding.ActivityLoginBinding
 import com.example.fitfoood.view.ViewModelFactory
 import com.example.fitfoood.view.forgotpass.ForgotPassActivity
 import com.example.fitfoood.view.signup.SignUpActivity
+import kotlinx.coroutines.runBlocking
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var viewModel: LoginViewModel
@@ -49,13 +51,15 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun setupAction() {
+        binding.emailEditText.setText("saputra@fahli.net")
+        binding.passwordEditText.setText("password")
         binding.SignUpTextView.setOnClickListener {
             startActivity(Intent(this, SignUpActivity::class.java))
         }
         binding.loginButton.setOnClickListener {
             val email = binding.emailEditText.text.toString()
             val password = binding.passwordEditText.text.toString()
-            viewModel.login(email, password).observe(this) {result ->
+            viewModel.signIn(email, password).observe(this) {result ->
                 when(result) {
                     is ApiResponse.Error -> {
                         Toast.makeText(this, "Password atau email yang Anda masukkan salah", Toast.LENGTH_SHORT).show()
@@ -71,20 +75,58 @@ class LoginActivity : AppCompatActivity() {
                                 show()
                             }
                         }else{
-                            val userData = result.data
-                            viewModel.saveSession(
-                                UserModel(
-                                    userData?.user?.username.toString(),
-                                    userData?.user?.email.toString(),
-                                    userData?.token.toString(),
-                                    userData?.user?.dateOfBirth.toString(),
-                                    userData?.user?.userId.toString(),
-                                )
+                            val tokens = result.data.data
+
+                            val tokenModel = TokenModel(
+                                tokens?.accessToken,
+                                tokens?.refreshToken
                             )
-                            startActivity(Intent(this, MainActivity::class.java))
+
+                            runBlocking {
+                                viewModel.saveToken(
+                                    tokenModel
+                                )
+
+                                getUser()
+                            }
+
                             return@observe
                         }
 
+                    }
+                }
+            }
+        }
+    }
+
+    private fun getUser() {
+        viewModel.getUser().observe(this) {result ->
+            when(result) {
+                is ApiResponse.Error -> {
+                    Toast.makeText(this, "Password atau email yang Anda masukkan salah", Toast.LENGTH_SHORT).show()
+                }
+                ApiResponse.Loading -> {}
+                is ApiResponse.Success -> {
+                    if (result.data == null) {
+                        AlertDialog.Builder(this).apply {
+                            setTitle("Oops!")
+                            setMessage("Email atau password yang Anda masukkan salah.")
+                            setPositiveButton("OK") { _, _ -> }
+                            create()
+                            show()
+                        }
+                    }else{
+                        val user = result.data.data?.user
+                        viewModel.saveUser(
+                            UserModel(
+                                user?.name,
+                                user?.email,
+                                user?.id
+                            )
+                        )
+                        startActivity(Intent(this, MainActivity::class.java))
+                        finish()
+                        return@observe
                     }
                 }
             }

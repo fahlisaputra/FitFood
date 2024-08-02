@@ -26,7 +26,7 @@ import com.example.fitfoood.view.workoutrecomendation.WorkOutActivity
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
-    private lateinit var homeViewModel: HomeViewModel
+    private lateinit var viewModel: HomeViewModel
     private lateinit var token: String
     private lateinit var label:String
     private lateinit var idhealth: String
@@ -34,7 +34,7 @@ class HomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -44,27 +44,38 @@ class HomeFragment : Fragment() {
 
         token = "your_token_here" // Retrieve or set your token here
 
-        homeViewModel = ViewModelFactory.getInstance(requireContext()).create(HomeViewModel::class.java)
+        viewModel = ViewModelFactory.getInstance(requireContext()).create(HomeViewModel::class.java)
 
-        homeViewModel.getSession().observe(viewLifecycleOwner) { user ->
-            token = user.token
-            idhealth = user.userId
-            val username = user.username.split(" ").firstOrNull() ?: user.username // Ambil kata pertama atau username jika tidak ada spasi
+        viewModel.getUser().observe(viewLifecycleOwner) { user ->
+            val username = user.name?.split(" ")?.firstOrNull() ?: user.name
             binding.tvItem.text = "Hai, $username"
-
-            homeViewModel.getSessionBMI().observe(viewLifecycleOwner){result->
-                label = result.label
-                if(label == "") {
-                    label = "ideal"
-                }
-                val labelUp = label.toUpperCase()
-                binding.textViewBMICard.text = labelUp
-
-                showRecyclerList()
-            }
-//            fetchBMIData()
-            loadProfilePicture()
         }
+
+        showRecyclerList()
+
+//        homeViewModel.getSession().observe(viewLifecycleOwner) { user ->
+//            token = user.token
+//            idhealth = user.userId
+//            val username = user.username.split(" ").firstOrNull() ?: user.username // Ambil kata pertama atau username jika tidak ada spasi
+//            binding.tvItem.text = "Hai, $username"
+//
+//            homeViewModel.getSessionBMI().observe(viewLifecycleOwner){result->
+//                label = result.label
+//                if(label == "") {
+//                    label = "ideal"
+//                }
+//                val labelUp = label.toUpperCase()
+//                binding.textViewBMICard.text = labelUp
+//
+//                showRecyclerList()
+//            }
+////            fetchBMIData()
+//            loadProfilePicture()
+//        }
+
+
+
+
 
         binding.apply {
             btnFoodRecomendation.setOnClickListener {
@@ -119,12 +130,12 @@ class HomeFragment : Fragment() {
     }
 
     private fun showRecyclerList() {
-        homeViewModel.getAllArticles(token).observe(viewLifecycleOwner) { artikel ->
-            when (artikel) {
+        viewModel.getArticles().observe(viewLifecycleOwner) { articles ->
+            when (articles) {
                 is ApiResponse.Success -> {
-                    var list = artikel.data ?: listOf()
-                    list = list.filter { it.aticleLabel == label }
-                    val adapter = ArtikelAdapter(list)
+                    val list = articles.data?.data?.articles ?: listOf()
+//                    list = list.filter { it.label == label }
+                    val adapter = ArticleAdapter(list)
                     with(binding.recyclerView) {
                         layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
                         setHasFixedSize(true)

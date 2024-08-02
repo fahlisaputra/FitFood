@@ -8,12 +8,14 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:paddingBottom="24dp"
+        tools:context=".view.signup.SignUpActivity">
 
         <TextView
             android:id="@+id/bgSignin"
             android:layout_width="match_parent"
-            android:layout_height="185dp"
+            android:layout_height="214dp"
             android:background="@drawable/bg_signin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -37,7 +39,7 @@
 
         <TextView
             android:id="@+id/messageTextView"
-            style="@style/SubHeading2_Regular"
+            style="@style/Body1_Regular"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -53,14 +55,14 @@
 
         <TextView
             android:id="@+id/nameText"
-            style="@style/SubHeading3_Medium"
+            style="@style/SubHeading1_Medium"
             android:textColor="@color/navy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/name"
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="48dp"
             app:layout_constraintTop_toBottomOf="@+id/bgSignin" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -90,58 +92,70 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
-            android:id="@+id/genderTextView"
-            style="@style/SubHeading3_Medium"
-            android:textColor="@color/navy"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/gender"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/nameEditTextLayout" />
-
-            <RadioGroup
-                android:id="@+id/genderRadioGroup"
-                android:layout_width="wrap_content"
-                android:layout_height="46dp"
-                android:orientation="horizontal"
-                android:layout_marginTop="0dp"
-                app:layout_constraintStart_toStartOf="@+id/genderTextView"
-                app:layout_constraintTop_toBottomOf="@+id/genderTextView">
-
-                <RadioButton
-                    android:id="@+id/radioMan"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/gender_man"
-                    style="@style/SubHeading3_Medium"/>
-
-                <RadioButton
-                    android:id="@+id/radioWoman"
-                    style="@style/SubHeading3_Medium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:text="@string/gender_girl"
-                    app:layout_constraintEnd_toStartOf="@+id/radioMan" />
-            </RadioGroup>
-
-        <TextView
             android:id="@+id/emailText"
-            style="@style/SubHeading3_Medium"
+            style="@style/SubHeading1_Medium"
             android:textColor="@color/navy"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
-            android:layout_marginTop="3dp"
+            android:layout_marginTop="16dp"
             android:text="@string/email"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/genderRadioGroup"
+            app:layout_constraintTop_toBottomOf="@+id/nameEditTextLayout"
             tools:alpha="100" />
+
+        <!--    <RadioGroup-->
+        <!--        android:id="@+id/genderRadioGroup"-->
+        <!--        android:layout_width="239dp"-->
+        <!--        android:layout_height="46dp"-->
+        <!--        android:orientation="horizontal"-->
+        <!--        android:layout_marginTop="8dp"-->
+        <!--        app:layout_constraintStart_toStartOf="@+id/genderTextView"-->
+        <!--        app:layout_constraintTop_toBottomOf="@+id/genderTextView">-->
+
+        <!--        <RadioButton-->
+        <!--            android:id="@+id/radioMan"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="@string/gender_man"-->
+        <!--            style="@style/Body1_Regular"/>-->
+
+        <!--        <RadioButton-->
+        <!--            android:id="@+id/radioWoman"-->
+        <!--            style="@style/Body1_Regular"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="16dp"-->
+        <!--            android:text="@string/gender_girl"-->
+        <!--            app:layout_constraintEnd_toStartOf="@+id/radioMan" />-->
+        <!--    </RadioGroup>-->
+
+        <!--    <com.google.android.material.textfield.TextInputLayout-->
+        <!--        android:id="@+id/dateEditTextLayout"-->
+        <!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+        <!--        android:layout_width="0dp"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_marginStart="32dp"-->
+        <!--        android:layout_marginEnd="32dp"-->
+        <!--        android:layout_marginTop="8dp"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintTop_toBottomOf="@+id/emailText"-->
+        <!--        tools:alpha="100">-->
+
+        <!--        <com.google.android.material.textfield.TextInputEditText-->
+        <!--            android:id="@+id/dateEditText"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:clickable="true"-->
+        <!--            android:ems="10"-->
+        <!--            android:focusable="false"-->
+        <!--            android:hint="@string/birth_date"-->
+        <!--            android:textSize="14sp" />-->
+        <!--    </com.google.android.material.textfield.TextInputLayout>-->
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/emailEditTextLayout"
@@ -173,7 +187,7 @@
 
         <TextView
             android:id="@+id/passText"
-            style="@style/SubHeading3_Medium"
+            style="@style/SubHeading1_Medium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -215,7 +229,7 @@
 
         <TextView
             android:id="@+id/repeatPassText"
-            style="@style/SubHeading3_Medium"
+            style="@style/SubHeading1_Medium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/confirm_password"
@@ -256,32 +270,74 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
-            android:id="@+id/dateOfBirthText"
-            style="@style/SubHeading3_Medium"
-            android:layout_width="match_parent"
+            android:id="@+id/genderTextView"
+            style="@style/SubHeading1_Medium"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/birth_date"
-            android:textColor="@color/navy"
-            android:layout_marginTop="16dp"
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
-            app:layout_constraintTop_toBottomOf="@+id/passwordRepeatEditTextLayout" />
+            android:layout_marginTop="16dp"
+            android:text="@string/gender"
+            android:textColor="@color/navy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordRepeatEditTextLayout"
+            tools:alpha="100" />
+
+        <RadioGroup
+            android:id="@+id/genderRadioGroup"
+            android:layout_width="239dp"
+            android:layout_height="46dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/genderTextView"
+            app:layout_constraintTop_toBottomOf="@+id/genderTextView">
+
+            <RadioButton
+                android:id="@+id/radioMan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gender_man"
+                style="@style/Body1_Regular"/>
+
+            <RadioButton
+                android:id="@+id/radioWoman"
+                style="@style/Body1_Regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/gender_girl"
+                app:layout_constraintEnd_toStartOf="@+id/radioMan" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/dateOfBirthTextView"
+            style="@style/SubHeading1_Medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/birth_date"
+            android:textColor="@color/navy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/genderRadioGroup"
+            tools:alpha="100" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/dateEditTextLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
-            android:layout_height="43dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
             android:layout_marginTop="8dp"
-            app:boxCornerRadiusBottomEnd="15dp"
-            app:boxCornerRadiusBottomStart="15dp"
-            app:boxCornerRadiusTopEnd="15dp"
-            app:boxCornerRadiusTopStart="15dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dateOfBirthText"
+            app:layout_constraintTop_toBottomOf="@+id/dateOfBirthTextView"
             tools:alpha="100">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -290,86 +346,10 @@
                 android:layout_height="wrap_content"
                 android:clickable="true"
                 android:ems="10"
-                android:focusable="false"
+                android:focusable="true"
+                android:hint="@string/birth_date"
                 android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
-
-        <TextView
-            android:id="@+id/heightText"
-            style="@style/SubHeading3_Medium"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/height"
-            android:textColor="@color/navy"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/dateEditTextLayout" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/heightEditTextLayout"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="0dp"
-            android:layout_height="43dp"
-            app:boxCornerRadiusBottomEnd="15dp"
-            app:boxCornerRadiusBottomStart="15dp"
-            app:boxCornerRadiusTopEnd="15dp"
-            app:boxCornerRadiusTopStart="15dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginTop="3dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/heightText">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/heightEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:ems="10"
-                android:textSize="14sp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <TextView
-            android:id="@+id/weightText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/weight"
-            style="@style/SubHeading3_Medium"
-            android:textColor="@color/navy"
-            android:layout_marginTop="16dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
-            app:layout_constraintTop_toBottomOf="@+id/heightEditTextLayout"/>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/weightEditTextLayout"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="0dp"
-            android:layout_height="43dp"
-            app:boxCornerRadiusBottomEnd="15dp"
-            app:boxCornerRadiusBottomStart="15dp"
-            app:boxCornerRadiusTopEnd="15dp"
-            app:boxCornerRadiusTopStart="15dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginTop="3dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/weightText">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/weightEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:ems="10"
-                android:textSize="14sp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
 
         <Button
             android:id="@+id/SignUpButton"
@@ -385,15 +365,15 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/weightEditTextLayout"
+            app:layout_constraintTop_toBottomOf="@+id/dateEditTextLayout"
             tools:alpha="100" />
+
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:paddingBottom="32dp"
             style="@style/SubHeading2_Light"
             android:text="@string/have_account"
             app:layout_constraintEnd_toEndOf="parent"
