@@ -125,6 +125,7 @@ class LoginActivity : AppCompatActivity() {
                             )
                         )
                         startActivity(Intent(this, MainActivity::class.java))
+                        finish()
                         return@observe
                     }
                 }
