@@ -37,7 +37,7 @@
 
         <TextView
             android:id="@+id/messageTextView"
-            style="@style/Body1_Regular"
+            style="@style/SubHeading2_Regular"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -53,7 +53,7 @@
 
         <TextView
             android:id="@+id/emailText"
-            style="@style/SubHeading1_Medium"
+            style="@style/SubHeading3_Medium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/email"
@@ -96,7 +96,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/password"
-            style="@style/SubHeading1_Medium"
+            style="@style/SubHeading3_Medium"
             android:textColor="@color/navy"
             android:layout_marginTop="16dp"
             android:layout_marginStart="32dp"

@@ -91,6 +91,11 @@
         <item name="fontFamily">@font/montserrat_medium</item>
         <item name="color">@color/white</item>
     </style>
+    <style name="SubHeading4_Medium">
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/montserrat_medium</item>
+        <item name="color">@color/black</item>
+    </style>
     <style name="SubHeading2_Medium">
         <item name="android:textSize">13sp</item>
         <item name="fontFamily">@font/montserrat_medium</item>
@@ -200,6 +205,109 @@
         <item name="color">@color/white</item>
     </style>
 
+    <style name="Heading1_Poppins_SemiBold">
+        <item name="android:textSize">28sp</item>
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="color">@color/white</item>
+    </style>
+    <style name="Heading2_Poppins_SemiBold">
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="color">@color/white</item>
+    </style>
+    <style name="SubHeading1_Poppins_SemiBold">
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="color">@color/white</item>
+    </style>
+    <style name="SubHeading3_Poppins_SemiBold">
+        <item name="android:textSize">15sp</item>
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="color">@color/white</item>
+    </style>
+    <style name="SubHeading2_Poppins_SemiBold">
+        <item name="android:textSize">13sp</item>
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="color">@color/white</item>
+    </style>
+    <style name="Body1_Poppins_SemiBold">
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="color">@color/white</item>
+    </style>
+    <style name="Body2_Poppins_SemiBold">
+        <item name="android:textSize">10sp</item>
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="color">@color/white</item>
+    </style>
+
+    <style name="Heading1_Poppins_Medium">
+        <item name="android:textSize">28sp</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="color">@color/white</item>
+    </style>
+    <style name="Heading2_Poppins_Medium">
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="color">@color/white</item>
+    </style>
+    <style name="SubHeading1_Poppins_Medium">
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="color">@color/white</item>
+    </style>
+    <style name="SubHeading2_Poppins_Medium">
+        <item name="android:textSize">13sp</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="color">@color/white</item>
+    </style>
+    <style name="Body1_Poppins_Medium">
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="color">@color/white</item>
+    </style>
+    <style name="Body2_Poppins_Medium">
+        <item name="android:textSize">10sp</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="color">@color/white</item>
+    </style>
+
+    <style name="Heading1_Poppins_Regular">
+        <item name="android:textSize">28sp</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="color">@color/white</item>
+    </style>
+    <style name="Heading2_Poppins_Regular">
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="color">@color/white</item>
+    </style>
+    <style name="SubHeading1_Poppins_Regular">
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="color">@color/white</item>
+    </style>
+    <style name="SubHeading3_Poppins_Regular">
+        <item name="android:textSize">15sp</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="color">@color/white</item>
+    </style>
+    <style name="SubHeading2_Poppins_Regular">
+        <item name="android:textSize">13sp</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="color">@color/white</item>
+    </style>
+    <style name="Body1_Poppins_Regular">
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="color">@color/white</item>
+    </style>
+    <style name="Body2_Poppins_Regular">
+        <item name="android:textSize">10sp</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="color">@color/white</item>
+    </style>
+
     <style name="Heading1_Poppins_Light">
         <item name="android:textSize">28sp</item>
         <item name="fontFamily">@font/poppins_light</item>
@@ -235,5 +343,22 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">20sp</item>
         <item name="color">@color/white</item>
+    </style>
+
+    <style name="roundImageArticleList" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">5sp</item>
+        <item name="color">@color/white</item>
+    </style>
+
+    <style name="circleImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">65dp</item>
+    </style>
+
+    <style name="tab_layout">
+        <item name="android:textColor">@color/navy</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAlignment">center</item>
     </style>
 </resources>

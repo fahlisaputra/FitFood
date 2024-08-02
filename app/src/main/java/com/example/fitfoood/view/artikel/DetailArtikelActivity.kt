@@ -31,15 +31,7 @@ class DetailArtikelActivity : AppCompatActivity() {
 
         artikel?.let { showArticleDetails(it) }
 
-        binding.toolbar.setNavigationOnClickListener {
-            onBackPressed()
-        }
-        val tbTitle = findViewById<TextView>(R.id.title_toolbar)
-        tbTitle.text = "Artikel Detail"
-
-
-
-        binding.toolbar.setOnClickListener {
+        binding.btnBack.setOnClickListener {
             finish()
         }
     }

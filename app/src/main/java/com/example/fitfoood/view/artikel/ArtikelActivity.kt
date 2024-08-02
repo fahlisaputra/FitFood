@@ -1,21 +1,24 @@
 package com.example.fitfoood.view.artikel
 
-import androidx.appcompat.app.AppCompatActivity
+import android.R
 import android.os.Bundle
+import android.widget.EditText
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentPagerAdapter
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.fitfoood.ArtikelAdapter
-import com.example.fitfoood.R
 import com.example.fitfoood.data.ApiResponse
 import com.example.fitfoood.data.response.ArtikelResponseItem
 import com.example.fitfoood.databinding.ActivityArtikelBinding
 import com.example.fitfoood.view.ViewModelFactory
 import com.example.fitfoood.view.main.HomeViewModel
+import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+
 
 class ArtikelActivity : AppCompatActivity() {
     private lateinit var binding: ActivityArtikelBinding
@@ -47,6 +50,31 @@ class ArtikelActivity : AppCompatActivity() {
             fetchArticles()
         }
 //        setupViewPager()
+
+        val searchView = findViewById<SearchView>(com.example.fitfoood.R.id.searchView)
+        changeSearchViewHintFont(searchView, com.example.fitfoood.R.font.montserrat_regular)
+
+        val tabLayout = findViewById<TabLayout>(com.example.fitfoood.R.id.tab_layout)
+        val tab1: TabLayout.Tab = tabLayout.newTab()
+        tab1.setCustomView(R.layout.custom_tab)
+        tabLayout.addTab(tab1)
+
+        val tab2: TabLayout.Tab = tabLayout.newTab()
+        tab2.setCustomView(R.layout.custom_tab)
+        tabLayout.addTab(tab2)
+
+    }
+
+    private fun changeSearchViewHintFont(searchView: SearchView, fontResId: Int) {
+        try {
+            val searchEditText: EditText =
+                searchView.findViewById(androidx.appcompat.R.id.search_src_text)
+            val customTypeface = resources.getFont(fontResId)
+            searchEditText.setTypeface(customTypeface)
+            //searchEditText.setHintTextColor(resources.getColor(com.example.fitfoood.R.color.hint_color)) // Optional: Change hint color
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
     }
 
     private fun setupViewPager() {

@@ -37,17 +37,17 @@ class SignUpActivity : AppCompatActivity() {
         binding.LoginTextView.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
         }
-//        binding.dateEditText.setOnClickListener {
-//            showDatePickerDialog()
-//        }
-//
-//        binding.genderRadioGroup.setOnCheckedChangeListener { group, checkedId ->
-//            gender = if (checkedId == R.id.radioMan) {
-//                "Male"
-//            } else {
-//                "Female"
-//            }
-//        }
+        binding.dateEditText.setOnClickListener {
+            showDatePickerDialog()
+        }
+
+        binding.genderRadioGroup.setOnCheckedChangeListener { group, checkedId ->
+            gender = if (checkedId == R.id.radioMan) {
+                "Male"
+            } else {
+                "Female"
+            }
+        }
 
         setupView()
         setupAction()
