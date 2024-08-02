@@ -48,6 +48,5 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/icon_hidupsehat" />
 
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

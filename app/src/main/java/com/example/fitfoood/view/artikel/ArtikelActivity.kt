@@ -54,14 +54,14 @@ class ArtikelActivity : AppCompatActivity() {
         val searchView = findViewById<SearchView>(com.example.fitfoood.R.id.searchView)
         changeSearchViewHintFont(searchView, com.example.fitfoood.R.font.montserrat_regular)
 
-        val tabLayout = findViewById<TabLayout>(com.example.fitfoood.R.id.tab_layout)
-        val tab1: TabLayout.Tab = tabLayout.newTab()
-        tab1.setCustomView(R.layout.custom_tab)
-        tabLayout.addTab(tab1)
-
-        val tab2: TabLayout.Tab = tabLayout.newTab()
-        tab2.setCustomView(R.layout.custom_tab)
-        tabLayout.addTab(tab2)
+//        val tabLayout = findViewById<TabLayout>(com.example.fitfoood.R.id.tab_layout)
+//        val tab1: TabLayout.Tab = tabLayout.newTab()
+//        tab1.setCustomView(R.layout.custom_tab)
+//        tabLayout.addTab(tab1)
+//
+//        val tab2: TabLayout.Tab = tabLayout.newTab()
+//        tab2.setCustomView(R.layout.custom_tab)
+//        tabLayout.addTab(tab2)
 
     }
 
