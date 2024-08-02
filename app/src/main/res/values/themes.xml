@@ -16,101 +16,246 @@
     <style name="Theme.FitFood" parent="Base.Theme.FitFood" />
     
     <style name="Heading1_Light">
-        <item name="android:textSize">24dp</item>
-        <item name="fontFamily">@font/work_sans_light</item>
+        <item name="android:textSize">28sp</item>
+        <item name="fontFamily">@font/montserrat_light</item>
         <item name="color">@color/black</item>
     </style>
     <style name="Heading2_Light">
-        <item name="android:textSize">20dp</item>
-        <item name="fontFamily">@font/work_sans_light</item>
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/montserrat_light</item>
         <item name="color">@color/black</item>
     </style>
     <style name="SubHeading1_Light">
-        <item name="android:textSize">16dp</item>
-        <item name="fontFamily">@font/work_sans_light</item>
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/montserrat_light</item>
         <item name="color">@color/black</item>
     </style>
     <style name="SubHeading2_Light">
-        <item name="android:textSize">14dp</item>
-        <item name="fontFamily">@font/work_sans_light</item>
+        <item name="android:textSize">13sp</item>
+        <item name="fontFamily">@font/montserrat_light</item>
         <item name="color">@color/black</item>
     </style>
     <style name="Body1_Light">
-        <item name="android:textSize">14dp</item>
-        <item name="fontFamily">@font/work_sans_light</item>
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/montserrat_light</item>
         <item name="color">@color/black</item>
     </style>
     <style name="Body2_Light">
-        <item name="android:textSize">10dp</item>
-        <item name="fontFamily">@font/work_sans_light</item>
+        <item name="android:textSize">10sp</item>
+        <item name="fontFamily">@font/montserrat_light</item>
         <item name="color">@color/black</item>
     </style>
 
     <style name="Heading1_Regular">
-        <item name="android:textSize">24dp</item>
-        <item name="fontFamily">@font/work_sans_regular</item>
+        <item name="android:textSize">28sp</item>
+        <item name="fontFamily">@font/montserrat_regular</item>
         <item name="color">@color/black</item>
     </style>
     <style name="Heading2_Regular">
-        <item name="android:textSize">20dp</item>
-        <item name="fontFamily">@font/work_sans_regular</item>
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/montserrat_regular</item>
         <item name="color">@color/black</item>
     </style>
     <style name="SubHeading1_Regular">
-        <item name="android:textSize">16dp</item>
-        <item name="fontFamily">@font/work_sans_regular</item>
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/montserrat_regular</item>
         <item name="color">@color/black</item>
     </style>
     <style name="SubHeading2_Regular">
-        <item name="android:textSize">14dp</item>
-        <item name="fontFamily">@font/work_sans_regular</item>
+        <item name="android:textSize">13sp</item>
+        <item name="fontFamily">@font/montserrat_regular</item>
         <item name="color">@color/black</item>
     </style>
     <style name="Body1_Regular">
-        <item name="android:textSize">14dp</item>
-        <item name="fontFamily">@font/work_sans_regular</item>
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/montserrat_regular</item>
         <item name="color">@color/black</item>
     </style>
     <style name="Body2_Regular">
-        <item name="android:textSize">10dp</item>
-        <item name="fontFamily">@font/work_sans_regular</item>
+        <item name="android:textSize">10sp</item>
+        <item name="fontFamily">@font/montserrat_regular</item>
+        <item name="color">@color/black</item>
+    </style>
+
+    <style name="Heading1_Medium">
+        <item name="android:textSize">28sp</item>
+        <item name="fontFamily">@font/montserrat_medium</item>
+        <item name="color">@color/black</item>
+    </style>
+    <style name="Heading2_Medium">
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/montserrat_medium</item>
+        <item name="color">@color/black</item>
+    </style>
+    <style name="SubHeading1_Medium">
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/montserrat_medium</item>
+        <item name="color">@color/black</item>
+    </style>
+    <style name="SubHeading2_Medium">
+        <item name="android:textSize">13sp</item>
+        <item name="fontFamily">@font/montserrat_medium</item>
+        <item name="color">@color/black</item>
+    </style>
+    <style name="Body1_Medium">
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/montserrat_medium</item>
+        <item name="color">@color/black</item>
+    </style>
+    <style name="Body2_Medium">
+        <item name="android:textSize">10sp</item>
+        <item name="fontFamily">@font/montserrat_medium</item>
         <item name="color">@color/black</item>
     </style>
 
     <style name="Heading1_Bold">
-        <item name="android:textSize">24dp</item>
-        <item name="fontFamily">@font/work_sans_bold</item>
+        <item name="android:textSize">28sp</item>
+        <item name="fontFamily">@font/montserrat_bold</item>
         <item name="color">@color/black</item>
     </style>
     <style name="Heading2_Bold">
-        <item name="android:textSize">20dp</item>
-        <item name="fontFamily">@font/work_sans_bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/montserrat_bold</item>
         <item name="color">@color/black</item>
     </style>
     <style name="SubHeading1_Bold">
-        <item name="android:textSize">16dp</item>
-        <item name="fontFamily">@font/work_sans_bold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="fontFamily">@font/montserrat_bold</item>
         <item name="color">@color/black</item>
     </style>
     <style name="SubHeading2_Bold">
-        <item name="android:textSize">14dp</item>
-        <item name="fontFamily">@font/work_sans_bold</item>
+        <item name="android:textSize">13sp</item>
+        <item name="fontFamily">@font/montserrat_bold</item>
         <item name="color">@color/black</item>
     </style>
-    <style name="Body1_Bold">
-        <item name="android:textSize">14dp</item>
-        <item name="fontFamily">@font/work_sans_bold</item>
+
+    <style name="Heading1_SemiBold">
+        <item name="android:textSize">28sp</item>
+        <item name="fontFamily">@font/montserrat_semibold</item>
         <item name="color">@color/black</item>
     </style>
-    <style name="Body2_Bold">
-        <item name="android:textSize">10dp</item>
-        <item name="fontFamily">@font/work_sans_bold</item>
+    <style name="Heading2_SemiBold">
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/montserrat_semibold</item>
+        <item name="color">@color/black</item>
+    </style>
+    <style name="SubHeading1_SemiBold">
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/montserrat_semibold</item>
+        <item name="color">@color/black</item>
+    </style>
+    <style name="SubHeading2_SemiBold">
+        <item name="android:textSize">15sp</item>
+        <item name="fontFamily">@font/montserrat_semibold</item>
+        <item name="color">@color/black</item>
+    </style>
+    <style name="Body1_SemiBold">
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/montserrat_semibold</item>
+        <item name="color">@color/black</item>
+    </style>
+    <style name="Body2_SemiBold">
+        <item name="android:textSize">10sp</item>
+        <item name="fontFamily">@font/montserrat_semibold</item>
+        <item name="color">@color/black</item>
+    </style>
+
+    <style name="Heading1_Poppins_Bold">
+        <item name="android:textSize">28sp</item>
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="color">@color/black</item>
+    </style>
+    <style name="Heading2_Poppins_Bold">
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="color">@color/black</item>
+    </style>
+    <style name="SubHeading1_Poppins_Bold">
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="color">@color/black</item>
+    </style>
+    <style name="SubHeading2_Poppins_Bold">
+        <item name="android:textSize">13sp</item>
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="color">@color/black</item>
+    </style>
+    <style name="Body1_Poppins_Bold">
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="color">@color/black</item>
+    </style>
+    <style name="Body2_Poppins_Bold">
+        <item name="android:textSize">10sp</item>
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="color">@color/black</item>
+    </style>
+
+    <style name="Heading1_Poppins_SemiBold">
+        <item name="android:textSize">28sp</item>
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="color">@color/black</item>
+    </style>
+    <style name="Heading2_Poppins_SemiBold">
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="color">@color/black</item>
+    </style>
+    <style name="SubHeading1_Poppins_SemiBold">
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="color">@color/black</item>
+    </style>
+    <style name="SubHeading2_Poppins_SemiBold">
+        <item name="android:textSize">13sp</item>
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="color">@color/black</item>
+    </style>
+    <style name="Body1_Poppins_SemiBold">
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="color">@color/black</item>
+    </style>
+    <style name="Body2_Poppins_SemiBold">
+        <item name="android:textSize">10sp</item>
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="color">@color/black</item>
+    </style>
+
+    <style name="Heading1_Poppins_Light">
+        <item name="android:textSize">28sp</item>
+        <item name="fontFamily">@font/poppins_light</item>
+        <item name="color">@color/black</item>
+    </style>
+    <style name="Heading2_Poppins_Light">
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/poppins_light</item>
+        <item name="color">@color/black</item>
+    </style>
+    <style name="SubHeading1_Poppins_Light">
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/poppins_light</item>
+        <item name="color">@color/black</item>
+    </style>
+    <style name="SubHeading2_Poppins_Light">
+        <item name="android:textSize">13sp</item>
+        <item name="fontFamily">@font/poppins_light</item>
+        <item name="color">@color/black</item>
+    </style>
+    <style name="Body1_Poppins_Light">
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/poppins_light</item>
+        <item name="color">@color/black</item>
+    </style>
+    <style name="Body2_Poppins_Light">
+        <item name="android:textSize">10sp</item>
+        <item name="fontFamily">@font/poppins_light</item>
         <item name="color">@color/black</item>
     </style>
 
     <style name="roundImageView" parent="">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">20dp</item>
+        <item name="cornerSize">20sp</item>
         <item name="color">@color/black</item>
     </style>
 

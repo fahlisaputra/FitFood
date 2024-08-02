@@ -15,11 +15,11 @@
     <string name="login">Login</string>
     <string name="message_welcome_page">A place to share the excitement among Dicoding users</string>
     <string name="title_welcome_page">Welcome to dicoStory!</string>
-    <string name="title_signup_page">Welcome 👋</string>
+    <string name="title_signup_page">Please Fill In Your Personal Data</string>
     <string name="title_form_page">Enter your data</string>
-    <string name="email">Email</string>
-    <string name="password">Password</string>
-    <string name="message_login_page">Log in to your account to continue</string>
+    <string name="email">Enter Your Email</string>
+    <string name="password">Enter Your Password</string>
+    <string name="message_login_page">Enter your email and password</string>
     <string name="massage_signup_page">Please enter your data</string>
     <string name="gender">Gender</string>
     <string name="gender_man">Male</string>
@@ -27,12 +27,12 @@
     <string name="birth_date">Date of Birth</string>
     <string name="weight">Weight (kg)</string>
     <string name="height">Height (cm)</string>
-    <string name="title_login_page">Welcome back 👋</string>
-    <string name="name">Name</string>
+    <string name="title_login_page">Welcome Back</string>
+    <string name="name">Enter Your Name</string>
     <string name="message_main_page">Happy Learning at Dicoding.</string>
     <string name="greeting">Hello %1$s,</string>
     <string name="logout">Logout</string>
-    <string name="dont_have_account">Dont have an account?</string>
+    <string name="dont_have_account">Don\'t have an account?</string>
     <string name="password_repeat">Password Repeat</string>
     <string name="have_account">Already have an account?</string>
 
@@ -48,14 +48,14 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_activity_main">MainActivity</string>
 
-    <string name="guest_name">Hi, Lucy!</string>
+    <string name="guest_name">Hi, Zoe!</string>
     <string name="guest_welcome">Welcome to FitFood</string>
-    <string name="bmi_card">Ideal Body Weight</string>
-    <string name="bmi_desc">Make sure your calorie intake matches your daily calorie needs.</string>
+    <string name="bmi_card">Ideal Weight</string>
+    <string name="bmi_desc">Make sure your calorie intake meets your daily calorie needs.</string>
     <string name="recomend_for_you">Recommendations for you</string>
 
     <string name="dummy_artikel_headline">Healthy Lifestyle to Maintain Ideal Body Weight</string>
-    <string name="home_artikel">Articles</string>
+    <string name="home_artikel">Article</string>
     <string name="home_see_all">See more</string>
 
     <string name="dummy_food_headline">Grilled Chicken</string>
@@ -82,14 +82,14 @@
 
     <string name="bb_awal_text">50 kg</string>
     <string name="bb_awal_desc">Initial Weight</string>
-    <string name="bb_sekarang_text">50 kg</string>
+    <string name="bb_sekarang_text">70kg</string>
     <string name="bb_sekarang_desc">Current Weight</string>
     <string name="bb_sasaran_text">50 kg</string>
 
 
     <string name="title_artikel">Pola Hidup Sehat Untuk Menjaga Berat Badan Ideal</string>
     <string name="desc_artikel">Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia.</string>
-    <string name="title_artikel_page">Sedang Trending</string>
+    <string name="title_artikel_page">Article Recommendations</string>
 
 
     <string name="berat_sasaran_title">Masukan Berat Sasaran</string>
@@ -104,14 +104,14 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="dummy_detail_desc_notif">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.</string>
-    <string name="account">Account</string>
+    <string name="account">Your Account</string>
     <string name="dumb_name">Rayhan Wahyu</string>
     <string name="dumbEmail">rayhanwahyu@gmail.com</string>
     <string name="age">Age</string>
     <string name="dummy_age">21</string>
     <string name="edit">Edit</string>
     <string name="eat_reminder">Meal Reminder</string>
-    <string name="reminder">Reminder</string>
+    <string name="reminder">Your Reminder</string>
     <string name="language">Language</string>
     <string name="weight_scale_reminder">Weight Reminder</string>
     <string name="breakfast">Breakfast</string>
@@ -137,20 +137,20 @@
     <string name="confirm_mail">Confirm Mail</string>
     <string name="title_verifiy_email">Verify Email Address</string>
     <string name="message_verify_email">Verification code sent to</string>
-    <string name="dummy_email">rayhanwahyu@gmail.com</string>
+    <string name="dummy_email">fitfoodrecomender@gmail.com</string>
     <string name="confirm_code">Confirm Code</string>
     <string name="resend">Resend Confirmation Code</string>
     <string name="title_new_pass">New Password</string>
     <string name="message_new_pass">Please write your new password.</string>
-    <string name="confirm_password">Confirm Password</string>
+    <string name="confirm_password">Repeat Your Password</string>
     <string name="or_sign_in_with">- Or sign in with -</string>
     <string name="or_sign_up_with">- Or sign up with -</string>
-    <string name="profile_name">"Lucyta Qutsyaning "</string>
+    <string name="profile_name">"Fit Food Recommend "</string>
     <string name="account_setting">Account Setting</string>
     <string name="account_edit">Edit Account</string>
     <string name="submit">Submit</string>
     <string name="food">Food</string>
-    <string name="workout">Workout</string>
+    <string name="workout">Sport</string>
     <string name="food_list">Food List</string>
     <string name="food_recommendation">Food Recommendation</string>
     <string name="search_food">Search Food</string>
@@ -160,9 +160,10 @@
     <string name="total_calories">Total Calories</string>
     <string name="recommendation_result">Recommencation Results</string>
     <string name="dummy_bmi">BMI 21</string>
+    <string name="dummy_bmi_home">BMI : 21</string>
     <string name="desc_bmi">You are overweight</string>
     <string name="tb_sekarang_desc">Current Height</string>
-    <string name="tb_sekarang_text">150 cm</string>
+    <string name="tb_sekarang_text">170cm</string>
     <string name="berat_sekarang_title">Enter the current weight</string>
     <string name="tb_sekarang_title">Enter the current height</string>
     <string name="bb_sekarang_title">Enter the current weight</string>
@@ -172,6 +173,13 @@
     <string name="message_input_height">Enter your height in cm</string>
     <string name="message_input_weight">Enter your weight in kg</string>
     <string name="input_bmi">Input Your Height and Weight</string>
+    <string name="search_article">Search for articles</string>
+    <string name="message_signup_page">Fill in your data if you haven\'t registered</string>
+    <string name="weight_tracker">Weight Tracker</string>
+    <string name="take_picture">Take Picture</string>
+    <string name="detection_process">Detection Process</string>
+    <string name="calorie_detection_results">Calorie Detection Results</string>
+    <string name="try_now">Try Now</string>
 
 </resources>
 
