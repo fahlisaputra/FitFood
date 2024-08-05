@@ -5,6 +5,8 @@ import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
+import android.view.View
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
@@ -41,11 +43,13 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_home -> {
                     showFragment(homeFragment)
                     updateIcons(R.id.navigation_home)
+                    binding.chat.setVisibility(View.VISIBLE)
                     true // Return true to indicate the item is selected
                 }
                 R.id.navigation_analysis -> {
                     if (allPermissionsGranted()) {
                         startCameraActivity()
+                        binding.chat.setVisibility(View.GONE)
                     } else {
                         requestCameraPermission()
                     }
@@ -54,6 +58,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_profile -> {
                     showFragment(profileFragment)
                     updateIcons(R.id.navigation_profile)
+                    binding.chat.setVisibility(View.GONE)
                     true // Return true to indicate the item is selected
                 }
                 else -> false // Handle unknown item

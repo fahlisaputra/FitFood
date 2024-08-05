@@ -94,7 +94,7 @@
     <style name="SubHeading4_Medium">
         <item name="android:textSize">16sp</item>
         <item name="fontFamily">@font/montserrat_medium</item>
-        <item name="color">@color/black</item>
+        <item name="color">@color/white</item>
     </style>
     <style name="SubHeading2_Medium">
         <item name="android:textSize">13sp</item>
@@ -163,6 +163,11 @@
         <item name="fontFamily">@font/montserrat_semibold</item>
         <item name="color">@color/white</item>
     </style>
+    <style name="SubHeading3_SemiBold">
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/montserrat_semibold</item>
+        <item name="color">@color/white</item>
+    </style>
     <style name="Body1_SemiBold">
         <item name="android:textSize">12sp</item>
         <item name="fontFamily">@font/montserrat_semibold</item>
@@ -222,6 +227,11 @@
     </style>
     <style name="SubHeading3_Poppins_SemiBold">
         <item name="android:textSize">15sp</item>
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="color">@color/white</item>
+    </style>
+    <style name="SubHeading4_Poppins_SemiBold">
+        <item name="android:textSize">14sp</item>
         <item name="fontFamily">@font/poppins_semibold</item>
         <item name="color">@color/white</item>
     </style>
@@ -328,6 +338,16 @@
         <item name="fontFamily">@font/poppins_light</item>
         <item name="color">@color/white</item>
     </style>
+    <style name="SubHeading3_Poppins_Light">
+        <item name="android:textSize">15sp</item>
+        <item name="fontFamily">@font/poppins_light</item>
+        <item name="color">@color/white</item>
+    </style>
+    <style name="SubHeading4_Poppins_Light">
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/poppins_light</item>
+        <item name="color">@color/white</item>
+    </style>
     <style name="Body1_Poppins_Light">
         <item name="android:textSize">12sp</item>
         <item name="fontFamily">@font/poppins_light</item>
@@ -336,6 +356,52 @@
     <style name="Body2_Poppins_Light">
         <item name="android:textSize">10sp</item>
         <item name="fontFamily">@font/poppins_light</item>
+        <item name="color">@color/white</item>
+    </style>
+
+    <style name="Heading1_Inter_Bold">
+        <item name="android:textSize">28sp</item>
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="color">@color/white</item>
+    </style>
+    <style name="Heading2_Inter_Bold">
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="color">@color/white</item>
+    </style>
+    <style name="SubHeading1_Inter_Bold">
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="color">@color/white</item>
+    </style>
+    <style name="SubHeading5_Inter_Bold">
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="color">@color/white</item>
+    </style>
+    <style name="SubHeading3_Inter_Bold">
+        <item name="android:textSize">15sp</item>
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="color">@color/white</item>
+    </style>
+    <style name="SubHeading4_Inter_Bold">
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="color">@color/white</item>
+    </style>
+    <style name="SubHeading2_Inter_Bold">
+        <item name="android:textSize">13sp</item>
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="color">@color/white</item>
+    </style>
+    <style name="Body1_Inter_Bold">
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="color">@color/white</item>
+    </style>
+    <style name="Body2_Inter_Bold">
+        <item name="android:textSize">10sp</item>
+        <item name="fontFamily">@font/inter_bold</item>
         <item name="color">@color/white</item>
     </style>
 

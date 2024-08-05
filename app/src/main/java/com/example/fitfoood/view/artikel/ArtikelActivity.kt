@@ -10,7 +10,6 @@ import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.fitfoood.ArtikelAdapter
 import com.example.fitfoood.data.ApiResponse
 import com.example.fitfoood.data.response.ArtikelResponseItem
 import com.example.fitfoood.databinding.ActivityArtikelBinding
@@ -50,8 +49,8 @@ class ArtikelActivity : AppCompatActivity() {
 //        }
 //        setupViewPager()
 
-        val searchView = findViewById<SearchView>(com.example.fitfoood.R.id.searchView)
-        changeSearchViewHintFont(searchView, com.example.fitfoood.R.font.montserrat_regular)
+//        val searchView = findViewById<SearchView>(com.example.fitfoood.R.id.searchView)
+//        changeSearchViewHintFont(searchView, com.example.fitfoood.R.font.montserrat_regular)
 
 //        val tabLayout = findViewById<TabLayout>(com.example.fitfoood.R.id.tab_layout)
 //        val tab1: TabLayout.Tab = tabLayout.newTab()
@@ -64,17 +63,17 @@ class ArtikelActivity : AppCompatActivity() {
 
     }
 
-    private fun changeSearchViewHintFont(searchView: SearchView, fontResId: Int) {
-        try {
-            val searchEditText: EditText =
-                searchView.findViewById(androidx.appcompat.R.id.search_src_text)
-            val customTypeface = resources.getFont(fontResId)
-            searchEditText.setTypeface(customTypeface)
-            //searchEditText.setHintTextColor(resources.getColor(com.example.fitfoood.R.color.hint_color)) // Optional: Change hint color
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-    }
+//    private fun changeSearchViewHintFont(searchView: SearchView, fontResId: Int) {
+//        try {
+//            val searchEditText: EditText =
+//                searchView.findViewById(androidx.appcompat.R.id.search_src_text)
+//            val customTypeface = resources.getFont(fontResId)
+//            searchEditText.setTypeface(customTypeface)
+//            //searchEditText.setHintTextColor(resources.getColor(com.example.fitfoood.R.color.hint_color)) // Optional: Change hint color
+//        } catch (e: Exception) {
+//            e.printStackTrace()
+//        }
+//    }
 
     private fun setupViewPager() {
 

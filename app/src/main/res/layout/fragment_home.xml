@@ -43,41 +43,90 @@
                 android:layout_width="331dp"
                 android:layout_height="123dp"
                 android:layout_marginTop="148dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.493"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/relativeLayout"
+                app:layout_constraintStart_toStartOf="@+id/relativeLayout"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/bg_bmi" />
 
-            <ImageView
-                android:id="@+id/btn_food_recomendation"
-                android:layout_width="151dp"
-                android:layout_height="51dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="16dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView5"
-                android:src="@drawable/btn_food" />
-
-            <ImageView
-                android:id="@+id/btn_wo_recomendation"
-                android:layout_width="151dp"
-                android:layout_height="51dp"
-                android:layout_marginTop="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/btn_food_recomendation"
-                app:layout_constraintTop_toBottomOf="@+id/textView5"
-                app:srcCompat="@drawable/btn_sport" />
-
-            <ImageView
-                android:id="@+id/imageView10"
+            <LinearLayout
+                android:id="@+id/linearLayout2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:src="@drawable/ic_sport"
-                app:layout_constraintStart_toStartOf="@+id/btn_wo_recomendation"
-                app:layout_constraintTop_toTopOf="@+id/btn_wo_recomendation" />
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/textView5"
+                app:layout_constraintStart_toStartOf="@+id/textView5"
+                app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/btn_food_recomendation"
+                        android:layout_width="151dp"
+                        android:layout_height="51dp"
+                        android:src="@drawable/btn_food"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_food"
+                        app:layout_constraintStart_toStartOf="@+id/btn_food_recomendation"
+                        app:layout_constraintTop_toTopOf="@+id/btn_food_recomendation" />
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        style="@style/SubHeading2_SemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/food"
+                        android:textColor="@color/white"
+                        app:layout_constraintStart_toEndOf="@+id/imageView6"
+                        app:layout_constraintTop_toTopOf="@+id/btn_food_recomendation" />
+
+                    <ImageView
+                        android:id="@+id/btn_wo_recomendation"
+                        android:layout_width="151dp"
+                        android:layout_height="51dp"
+                        android:layout_marginStart="24dp"
+                        app:layout_constraintStart_toEndOf="@+id/btn_food_recomendation"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/btn_sport" />
+
+                    <ImageView
+                        android:id="@+id/imageView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_sport"
+                        app:layout_constraintStart_toStartOf="@+id/btn_wo_recomendation"
+                        app:layout_constraintTop_toTopOf="@+id/btn_wo_recomendation" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        style="@style/SubHeading2_SemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/workout"
+                        android:textColor="@color/white"
+                        app:layout_constraintStart_toEndOf="@+id/imageView10"
+                        app:layout_constraintTop_toTopOf="@+id/btn_wo_recomendation" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
 
             <ImageView
                 android:id="@+id/imageView4"
@@ -95,10 +144,10 @@
                 android:id="@+id/try_now"
                 android:layout_width="345dp"
                 android:layout_height="198dp"
-                android:src="@drawable/bg_analysis"
                 android:layout_marginTop="85dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                android:src="@drawable/bg_analysis"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout2"
                 app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
             <ImageView
@@ -298,8 +347,8 @@
                 android:layout_marginTop="148dp"
                 android:paddingHorizontal="20dp"
                 android:paddingVertical="8dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/relativeLayout"
+                app:layout_constraintStart_toStartOf="@+id/relativeLayout"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
@@ -332,9 +381,9 @@
                     style="@style/SubHeading2_SemiBold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:text="@string/bmi_card"
                     android:textColor="@color/black"
-                    android:layout_marginTop="8dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -351,40 +400,6 @@
                     app:layout_constraintTop_toBottomOf="@id/textViewBMICard" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <TextView
-                android:id="@+id/textView9"
-                style="@style/SubHeading2_SemiBold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="15dp"
-                android:text="@string/food"
-                android:textColor="@color/white"
-                app:layout_constraintStart_toEndOf="@+id/imageView6"
-                app:layout_constraintTop_toTopOf="@+id/btn_food_recomendation" />
-
-            <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:src="@drawable/ic_food"
-                app:layout_constraintStart_toStartOf="@+id/btn_food_recomendation"
-                app:layout_constraintTop_toTopOf="@+id/btn_food_recomendation" />
-
-            <TextView
-                android:id="@+id/textView8"
-                style="@style/SubHeading2_SemiBold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="15dp"
-                android:text="@string/workout"
-                android:textColor="@color/white"
-                app:layout_constraintStart_toEndOf="@+id/imageView10"
-                app:layout_constraintTop_toTopOf="@+id/btn_wo_recomendation" />
 
             <TextView
                 android:id="@+id/textView5"

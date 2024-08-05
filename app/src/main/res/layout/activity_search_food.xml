@@ -27,7 +27,7 @@
     <androidx.appcompat.widget.SearchView
         android:id="@+id/searchView"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="38dp"
         android:layout_margin="16dp"
         android:background="@drawable/search_view_bg"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -45,6 +45,8 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -65,10 +67,10 @@
 
         <ImageView
             android:id="@+id/imageView7"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_marginTop="4dp"
-            android:src="@drawable/empty_food_img"
+            android:src="@drawable/ic_empty_food"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
@@ -76,10 +78,11 @@
 
         <TextView
             android:id="@+id/emptyFood"
-            style="@style/SubHeading1_Bold"
+            style="@style/SubHeading3_SemiBold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/empty_food"
+            android:layout_marginTop="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -94,18 +97,21 @@
             android:layout_height="wrap_content"
             android:text="@string/descEmptyFood"
             android:textAlignment="center"
+            android:layout_marginTop="8dp"
             app:layout_constraintEnd_toEndOf="@+id/emptyFood"
             app:layout_constraintStart_toStartOf="@id/emptyFood"
             app:layout_constraintTop_toBottomOf="@id/emptyFood" />
 
         <Button
             android:id="@+id/btn_fill_manual"
-            android:layout_width="wrap_content"
-            android:layout_height="45dp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:backgroundTint="@color/navi"
+            android:backgroundTint="#DEDEDE"
             android:text="@string/isi_manual"
-            style="@style/Body1_Bold"
+            style="@style/Body1_SemiBold"
+            android:textColor="#323232"
+            app:cornerRadius="50dp"
             app:layout_constraintEnd_toEndOf="@id/desc_empty_food"
             app:layout_constraintStart_toStartOf="@id/desc_empty_food"
             app:layout_constraintTop_toBottomOf="@id/desc_empty_food" />
