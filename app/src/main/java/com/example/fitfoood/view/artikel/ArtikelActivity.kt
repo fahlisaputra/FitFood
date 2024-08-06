@@ -1,21 +1,22 @@
 package com.example.fitfoood.view.artikel
 
-import androidx.appcompat.app.AppCompatActivity
+import android.R
 import android.os.Bundle
+import android.widget.EditText
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentPagerAdapter
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.fitfoood.ArtikelAdapter
-import com.example.fitfoood.R
 import com.example.fitfoood.data.ApiResponse
 import com.example.fitfoood.data.response.ArtikelResponseItem
 import com.example.fitfoood.databinding.ActivityArtikelBinding
-import com.example.fitfoood.view.ViewModelFactory
 import com.example.fitfoood.view.main.HomeViewModel
+import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+
 
 class ArtikelActivity : AppCompatActivity() {
     private lateinit var binding: ActivityArtikelBinding
@@ -32,22 +33,47 @@ class ArtikelActivity : AppCompatActivity() {
         token= "Your Token Here"
 
          // Gantikan dengan token Anda
-        homeViewModel = ViewModelFactory.getInstance(this).create(HomeViewModel::class.java)
-        homeViewModel.getSession().observe(this) { user ->
-            token = user.token
-        }
-
-        homeViewModel.getSessionBMI().observe(this){result->
-            label = result.label
-            if(label == "") {
-                label = "ideal"
-            }
-
-            showRecyclerList()
-            fetchArticles()
-        }
+//        homeViewModel = ViewModelFactory.getInstance(this).create(HomeViewModel::class.java)
+//        homeViewModel.getSession().observe(this) { user ->
+////            token = user.token
+//        }
+//
+//        homeViewModel.getSessionBMI().observe(this){result->
+//            label = result.label
+//            if(label == "") {
+//                label = "ideal"
+//            }
+//
+//            showRecyclerList()
+//            fetchArticles()
+//        }
 //        setupViewPager()
+
+//        val searchView = findViewById<SearchView>(com.example.fitfoood.R.id.searchView)
+//        changeSearchViewHintFont(searchView, com.example.fitfoood.R.font.montserrat_regular)
+
+//        val tabLayout = findViewById<TabLayout>(com.example.fitfoood.R.id.tab_layout)
+//        val tab1: TabLayout.Tab = tabLayout.newTab()
+//        tab1.setCustomView(R.layout.custom_tab)
+//        tabLayout.addTab(tab1)
+//
+//        val tab2: TabLayout.Tab = tabLayout.newTab()
+//        tab2.setCustomView(R.layout.custom_tab)
+//        tabLayout.addTab(tab2)
+
     }
+
+//    private fun changeSearchViewHintFont(searchView: SearchView, fontResId: Int) {
+//        try {
+//            val searchEditText: EditText =
+//                searchView.findViewById(androidx.appcompat.R.id.search_src_text)
+//            val customTypeface = resources.getFont(fontResId)
+//            searchEditText.setTypeface(customTypeface)
+//            //searchEditText.setHintTextColor(resources.getColor(com.example.fitfoood.R.color.hint_color)) // Optional: Change hint color
+//        } catch (e: Exception) {
+//            e.printStackTrace()
+//        }
+//    }
 
     private fun setupViewPager() {
 
@@ -60,54 +86,54 @@ class ArtikelActivity : AppCompatActivity() {
     }
 
     private fun fetchArticles() {
-        homeViewModel.getAllArticles(token).observe(this, Observer { artikel ->
-            when (artikel) {
-                is ApiResponse.Success -> {
-                    articles = artikel.data ?: listOf()
-                    articles = articles.filter { it.aticleLabel == label }
-                    if(tabLayoutMediator == null){
-                        tabLayoutMediator = TabLayoutMediator(binding.tabLayout, binding.viewPager, true, true){tab, position ->
-                            tab.setText(tabTitles[position])
-                        }
-                        val sectionsPagerAdapter = SectionsPagerAdapter(supportFragmentManager, articles)
-                        binding.viewPager.adapter = sectionsPagerAdapter
-                        tabLayoutMediator!!.attach()
-                    }else{
-
-                        (binding.viewPager.adapter as SectionsPagerAdapter).updateArticles(articles)
-                    }
-                }
-                is ApiResponse.Error -> {
-                    // Handle error
-                }
-                is ApiResponse.Loading -> {
-                    // Show loading
-                }
-            }
-        })
+//        homeViewModel.getAllArticles(token).observe(this, Observer { artikel ->
+//            when (artikel) {
+//                is ApiResponse.Success -> {
+//                    articles = artikel.data ?: listOf()
+//                    articles = articles.filter { it.aticleLabel == label }
+//                    if(tabLayoutMediator == null){
+//                        tabLayoutMediator = TabLayoutMediator(binding.tabLayout, binding.viewPager, true, true){tab, position ->
+//                            tab.setText(tabTitles[position])
+//                        }
+//                        val sectionsPagerAdapter = SectionsPagerAdapter(supportFragmentManager, articles)
+//                        binding.viewPager.adapter = sectionsPagerAdapter
+//                        tabLayoutMediator!!.attach()
+//                    }else{
+//
+//                        (binding.viewPager.adapter as SectionsPagerAdapter).updateArticles(articles)
+//                    }
+//                }
+//                is ApiResponse.Error -> {
+//                    // Handle error
+//                }
+//                is ApiResponse.Loading -> {
+//                    // Show loading
+//                }
+//            }
+//        })
     }
 
     private fun showRecyclerList() {
-        homeViewModel.getAllArticles(token).observe(this, Observer { artikel ->
-            when (artikel) {
-                is ApiResponse.Success -> {
-                    var list = artikel.data ?: listOf()
-                    list = list.filter { it.aticleLabel == label }
-                    val adapter = ArtikelAdapter(list)
-                    with(binding.recyclerView) {
-                        layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-                        setHasFixedSize(true)
-                        this.adapter = adapter
-                    }
-                }
-                is ApiResponse.Error -> {
-                    // Handle error
-                }
-                is ApiResponse.Loading -> {
-                    // Show loading
-                }
-            }
-        })
+//        homeViewModel.getAllArticles(token).observe(this, Observer { artikel ->
+//            when (artikel) {
+//                is ApiResponse.Success -> {
+//                    var list = artikel.data ?: listOf()
+//                    list = list.filter { it.aticleLabel == label }
+//                    val adapter = ArtikelAdapter(list)
+//                    with(binding.recyclerView) {
+//                        layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+//                        setHasFixedSize(true)
+//                        this.adapter = adapter
+//                    }
+//                }
+//                is ApiResponse.Error -> {
+//                    // Handle error
+//                }
+//                is ApiResponse.Loading -> {
+//                    // Show loading
+//                }
+//            }
+//        })
     }
 
     private val tabTitles = arrayOf("All", "Hidup Sehat", "Olahraga")

@@ -69,9 +69,9 @@ class EditAccountFragment : Fragment() {
         }
         accountViewModel = ViewModelProvider(this, ViewModelFactory.getInstance(requireContext())).get(AccountViewModel::class.java)
         accountViewModel.getSession().observe(viewLifecycleOwner) { user ->
-            token = user.token
-            val dateOfBirth = user.dateOfBirth
-            binding.dumbAge.text = calculateAge(dateOfBirth)
+//            token = user.token
+//            val dateOfBirth = user.dateOfBirth
+//            binding.dumbAge.text = calculateAge(dateOfBirth)
         }
         observeViewModel()
 
@@ -93,7 +93,7 @@ class EditAccountFragment : Fragment() {
     }
     private fun observeViewModel() {
         accountViewModel.getSession().observe(viewLifecycleOwner) { userModel ->
-            binding.dumbName.text = userModel.username
+//            binding.dumbName.text = userModel.username
             binding.dumbEmail.text = userModel.email
         }
     }

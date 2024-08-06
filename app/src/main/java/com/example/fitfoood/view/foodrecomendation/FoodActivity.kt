@@ -23,17 +23,17 @@ class FoodActivity : AppCompatActivity() {
 
         foodViewModel = ViewModelFactory.getInstance(this).create(HomeViewModel::class.java)
 
-        foodViewModel.getSession().observe(this) { user ->
-            token = user.token
-            foodViewModel.getSessionBMI().observe(this) { result ->
-                bmiLabel = result.label
-                if(bmiLabel == "") {
-                    bmiLabel = "ideal"
-                }
-                showRecycleList()
-                binding.bmiHead.text = bmiLabel
-            }
-        }
+//        foodViewModel.getSession().observe(this) { user ->
+////            token = user.token
+//            foodViewModel.getSessionBMI().observe(this) { result ->
+//                bmiLabel = result.label
+//                if(bmiLabel == "") {
+//                    bmiLabel = "ideal"
+//                }
+//                showRecycleList()
+//                binding.bmiHead.text = bmiLabel
+//            }
+//        }
 
         val tbTitle = findViewById<TextView>(R.id.title_toolbar)
         tbTitle.text = getString(R.string.food)
@@ -44,22 +44,22 @@ class FoodActivity : AppCompatActivity() {
     }
 
     private fun showRecycleList() {
-        foodViewModel.getFoodRec(token).observe(this) { response ->
-            when (response) {
-                is ApiResponse.Success -> {
-                    val list = response.data?.filter { it.label == bmiLabel }
-                    val adapter = FoodAdapter(list!!)
-                    binding.recyclerViewFood.layoutManager =
-                        LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-                    binding.recyclerViewFood.adapter = adapter
-                }
-                is ApiResponse.Error -> {
-
-                }
-                is ApiResponse.Loading -> {
-
-                }
-            }
-        }
+//        foodViewModel.getFoodRec(token).observe(this) { response ->
+//            when (response) {
+//                is ApiResponse.Success -> {
+//                    val list = response.data?.filter { it.label == bmiLabel }
+//                    val adapter = FoodAdapter(list!!)
+//                    binding.recyclerViewFood.layoutManager =
+//                        LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+//                    binding.recyclerViewFood.adapter = adapter
+//                }
+//                is ApiResponse.Error -> {
+//
+//                }
+//                is ApiResponse.Loading -> {
+//
+//                }
+//            }
+//        }
     }
 }

@@ -1,58 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/CardView"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="105dp"
     android:layout_margin="8dp"
-    app:cardCornerRadius="20dp"
-    android:background="#00000000"
-    app:cardElevation="10dp">
+    android:background="#F1F6F7">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-16dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/ic_clock"
+            app:layout_constraintStart_toEndOf="@+id/id_category_artikel"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/Body2_Poppins_Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="14h ago"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="13dp"
+            app:layout_constraintStart_toEndOf="@+id/imageView17"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tvName"
             style="@style/SubHeading2_Bold"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
             android:layout_marginHorizontal="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/imgPhoto"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_marginTop="8dp"
+            android:text="@string/dummy_artikel_headline"
+            app:layout_constraintEnd_toStartOf="@+id/imgPhoto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_category_artikel" />
+
+        <TextView
+            style="@style/Body2_Poppins_Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/see_more"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/tvName"
+            app:layout_constraintTop_toBottomOf="@+id/tvName" />
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imgPhoto"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="89dp"
+            android:layout_height="89dp"
             android:layout_margin="8dp"
             android:scaleType="centerCrop"
+            android:src="@drawable/img_artikel_dummy"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintCircleRadius="10dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.049"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.473"
-            app:shapeAppearanceOverlay="@style/roundImageView" />
+            app:shapeAppearanceOverlay="@style/roundImageArticleList" />
 
         <ImageView
             android:id="@+id/id_category_artikel"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/tvName"
-            app:layout_constraintTop_toBottomOf="@+id/tvName"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="-16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/icon_hidupsehat" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

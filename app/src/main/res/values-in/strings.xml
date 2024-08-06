@@ -15,11 +15,11 @@
     <string name="login">Masuk</string>
     <string name="message_welcome_page">Tempat berbagi keseruan sesama pengguna Dicoding</string>
     <string name="title_welcome_page">Selamat datang di dicoStory!</string>
-    <string name="title_signup_page">Selamat datang 👋</string>
+    <string name="title_signup_page">Silahkan Isi Data Diri Anda</string>
     <string name="title_form_page">Masukan data diri Anda</string>
-    <string name="email">Email</string>
-    <string name="password">Password</string>
-    <string name="message_login_page">Masuk ke akun Anda untuk melanjutkan</string>
+    <string name="email">Masukkan Email Anda</string>
+    <string name="password">Masukkan Password Anda</string>
+    <string name="message_login_page">Masukkan email dan password anda</string>
     <string name="massage_signup_page">Silahkan masukan data diri Anda</string>
     <string name="gender">Jenis Kelamin</string>
     <string name="gender_man">Laki-laki</string>
@@ -27,8 +27,8 @@
     <string name="birth_date">Tanggal Lahir</string>
     <string name="weight">Berat (kg)</string>
     <string name="height">Tinggi (cm)</string>
-    <string name="title_login_page">Selamat datang kembali 👋</string>
-    <string name="name">Nama</string>
+    <string name="title_login_page">Selamat Datang Kembali</string>
+    <string name="name">Masukkan Nama Anda</string>
     <string name="message_main_page">Selamat Belajar di Dicoding.</string>
     <string name="greeting">Halo %1$s,</string>
     <string name="logout">Keluar</string>
@@ -48,11 +48,11 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_activity_main">MainActivity</string>
 
-    <string name="guest_name">Hi, Lucy!</string>
-    <string name="guest_welcome">Selamat Datang</string>
+    <string name="guest_name">Hi, Zoe!</string>
+    <string name="guest_welcome">Selamat Datang di FitFood</string>
     <string name="bmi_card">Berat Badan Ideal</string>
-    <string name="bmi_desc">Pastikan asupan kalori sesuai dengan kebutuhan kalori harian.</string>
-    <string name="recomend_for_you">Rekomendasi untuk kamu</string>
+    <string name="bmi_desc">Pastikan asupan kalori Anda memenuhi kebutuhan kalori harian Anda.</string>
+    <string name="recomend_for_you">Rekomendasi Untukmu</string>
 
     <string name="dummy_artikel_headline">Pola Hidup Sehat Untuk Menjaga Berat Badan Ideal</string>
     <string name="home_artikel">Artikel</string>
@@ -84,7 +84,7 @@
 
     <string name="bb_awal_text">50 kg</string>
     <string name="bb_awal_desc">Berat Awal</string>
-    <string name="bb_sekarang_text">50 kg</string>
+    <string name="bb_sekarang_text">70kg</string>
     <string name="bb_sekarang_desc">Berat Saat Ini</string>
     <string name="bb_sasaran_text">50 kg</string>
     <string name="bb_sasaran_desc">Berat Sasaran</string>
@@ -97,14 +97,14 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="dummy_detail_desc_notif">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.\n</string>
-    <string name="account">Akun</string>
+    <string name="account">Akun Anda</string>
     <string name="dumb_name">Rayhan Wahyu</string>
     <string name="dumbEmail">rayhanwahyu@gmail.com</string>
     <string name="age">Umur</string>
     <string name="dummy_age">21</string>
     <string name="edit">Edit</string>
     <string name="eat_reminder">Pengingat Makan</string>
-    <string name="reminder">Pengingat</string>
+    <string name="reminder">Pengingat Anda</string>
     <string name="language">Bahasa</string>
     <string name="weight_scale_reminder">Pengingat Berat Badan</string>
     <string name="breakfast">Sarapan</string>
@@ -122,7 +122,7 @@
     <string name="title_artikel">Pola Hidup Sehat Untuk Menjaga Berat Badan Ideal</string>
     <string name="desc_artikel">Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia.
 </string>
-    <string name="title_artikel_page">Sedang Trending</string>
+    <string name="title_artikel_page">Artikel Rekomendasi</string>
 
 
     <string name="berat_sasaran_title">Masukan Berat Sasaran</string>
@@ -136,12 +136,12 @@
     <string name="confirm_mail">Konfirmasi Email</string>
     <string name="title_verifiy_email">Verifikasi Alamat Email</string>
     <string name="message_verify_email">Kode verifikasi dikirim ke</string>
-    <string name="dummy_email">rayhanwahyu@gmail.com</string> (This string can remain in English for demonstration purposes)
+    <string name="dummy_email">fitfoodrecomender@gmail.com</string> (This string can remain in English for demonstration purposes)
     <string name="confirm_code">Konfirmasi Kode</string>
     <string name="resend">Kirim Ulang Kode Konfirmasi</string>
     <string name="title_new_pass">Kata Sandi Baru</string>
     <string name="message_new_pass">Silahkan masukkan kata sandi baru Anda.</string>
-    <string name="confirm_password">Konfirmasi Kata Sandi</string>
+    <string name="confirm_password">Ulangi Password Anda</string>
     <string name="or_sign_in_with">- Atau masuk dengan -</string>
     <string name="or_sign_up_with">- Atau daftar dengan -</string>
     <string name="profile_name">"Nama Profil"</string>
@@ -159,9 +159,10 @@
     <string name="total_calories">Total Kalori</string>
     <string name="recommendation_result">Hasil Rekomendasi</string>
     <string name="dummy_bmi">BMI 21</string>
+    <string name="dummy_bmi_home">BMI : 21</string>
     <string name="desc_bmi">Berat badan Anda kelebihan</string>
     <string name="tb_sekarang_desc">Tinggi Badan Saat Ini</string>
-    <string name="tb_sekarang_text">150 cm</string>
+    <string name="tb_sekarang_text">170cm</string>
     <string name="berat_sekarang_title">Masukkan berat badan saat ini</string>
     <string name="tb_sekarang_title">Masukkan tinggi badan saat ini</string>
     <string name="bb_sekarang_title">Masukkan berat badan saat ini</string>
@@ -170,5 +171,17 @@
     <string name="message_input_weight">Masukkan berat badan Anda</string>
     <string name="message_input_height">Masukkan tinggi badan Anda</string>
     <string name="input_bmi">Masukan Berat dan Tinggi Anda</string>
+    <string name="search_article">Cari artikel</string>
+    <string name="message_signup_page">Isi data anda jika belum registrasi</string>
+    <string name="weight_tracker">Pelacak Berat Badan</string>
+    <string name="take_picture">Take Picture</string>
+    <string name="detection_process">Detection Process</string>
+    <string name="calorie_detection_results">Calorie Detection Results</string>
+    <string name="try_now">Coba Sekarang</string>
+    <string name="see_more">Selengkapnya…</string>
+    <string name="article_date">17, Juli 2024</string>
+    <string name="_5000_langkah_perhari">5000 Langkah Perhari</string>
+    <string name="dont_have_food">Kamu Belum Punya Makanan</string>
+    <string name="descDontHaveFood">Tambahkan makanan anda terlebih dahulu dan lakukan cek rekomendasi makanan tersebut untukmu.</string>
 
 </resources>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F5F5F5"
     tools:context=".view.foodchecker.ResultRecActivity">
 
     <include
@@ -14,7 +15,6 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="85dp"
-        android:background="@drawable/toolbar"
         android:minHeight="?attr/actionBarSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -35,63 +35,89 @@
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/foodPhoto"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_margin="5dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="24dp"
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
-        android:src="@drawable/ic_food_rec"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/img_food"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/include"
-        app:layout_constraintVertical_bias="0.329"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:shapeAppearanceOverlay="@style/roundImageView" />
 
     <TextView
         android:id="@+id/foodName"
-        style="@style/Heading1_Bold"
+        style="@style/Heading2_Poppins_Bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="24dp"
         android:text="@string/total_calories"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/foodPhoto"
         app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="@+id/foodPhoto"
         app:layout_constraintTop_toBottomOf="@+id/foodPhoto" />
 
-    <TextView
-        android:id="@+id/totalKcal"
-        style="@style/Heading2_Regular"
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="@string/dummy_total_kcal"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="@+id/foodName"
         app:layout_constraintStart_toStartOf="@+id/foodName"
-        app:layout_constraintTop_toBottomOf="@+id/foodName" />
+        app:layout_constraintTop_toBottomOf="@+id/foodName">
+
+        <ImageView
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:src="@drawable/ic_calorie" />
+
+        <TextView
+            android:id="@+id/totalKcal"
+            style="@style/SubHeading3_Poppins_Light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/dummy_kcal" />
+
+        <ImageView
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/ic_gram" />
+
+        <TextView
+            android:id="@+id/totalGram"
+            style="@style/SubHeading3_Poppins_Light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/dummy_gr"/>
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/foodRec"
-        style="@style/Body2_Bold"
+        style="@style/Body2_Poppins_SemiBold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:background="@drawable/rounded_corner_orange"
-        android:elevation="10dp"
+        android:background="@drawable/rounded_corner_blue"
         android:gravity="center"
-        android:paddingLeft="8dp"
-        android:paddingTop="3dp"
-        android:paddingRight="8dp"
-        android:paddingBottom="3dp"
+        android:paddingLeft="24dp"
+        android:paddingTop="5dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="5dp"
         android:text="@string/food_not_recommended"
         android:textColor="@color/white"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/totalKcal"
-        app:layout_constraintHorizontal_bias="0.484"
-        app:layout_constraintStart_toStartOf="@+id/totalKcal"
-        app:layout_constraintTop_toBottomOf="@+id/totalKcal" />
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

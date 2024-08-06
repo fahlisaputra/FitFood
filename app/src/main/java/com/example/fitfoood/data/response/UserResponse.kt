@@ -2,31 +2,55 @@ package com.example.fitfoood.data.response
 
 import com.google.gson.annotations.SerializedName
 
+/**
+ * User response
+ *
+ * This data class is used to define user response.
+ *
+ * @property data User data
+ * @constructor Create empty User response
+ */
 data class UserResponse(
 
-	@field:SerializedName("UserResponse")
-	val userResponse: UserResponseItem? = null
+	@field:SerializedName("data")
+	val data: UserDataResponse? = null
 )
 
-data class UserResponseItem(
+/**
+ * User data response
+ *
+ * This data class is used to define user data response.
+ *
+ * @property user User model
+ * @constructor Create empty User data response
+ */
+data class UserDataResponse(
 
-	@field:SerializedName("password")
-	val password: String? = null,
+	@field:SerializedName("user")
+	val user: UserModel? = null
 
-	@field:SerializedName("user_id")
-	val userId: String? = null,
+)
 
-	@field:SerializedName("date_of_birth")
-	val dateOfBirth: String? = null,
+/**
+ * User model
+ *
+ * This data class is used to define user model.
+ *
+ * @property id User id
+ * @property email User email
+ * @property name User name
+ * @constructor Create empty User model
+ */
+data class UserModel(
 
-	@field:SerializedName("created_at")
-	val createdAt: CreatedAt? = null,
+	@field:SerializedName("id")
+	val id: String? = null,
 
 	@field:SerializedName("email")
 	val email: String? = null,
 
-	@field:SerializedName("username")
-	val username: String? = null
+	@field:SerializedName("name")
+	val name: String? = null,
 )
 
 data class DateOfBirth(

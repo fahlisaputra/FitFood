@@ -24,8 +24,8 @@ class FormActivity : AppCompatActivity() {
         binding = ActivityFormBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val dateEditText = findViewById<TextInputEditText>(R.id.dateEditText)
-        dateEditText.setOnClickListener { showDatePicker() }
+//        val dateEditText = findViewById<TextInputEditText>(R.id.dateEditText)
+//        dateEditText.setOnClickListener { showDatePicker() }
 
     }
 
@@ -38,8 +38,8 @@ class FormActivity : AppCompatActivity() {
         datePicker.addOnPositiveButtonClickListener { selection ->
             val dateFormat = SimpleDateFormat("dd MMM yyyy", Locale.getDefault())
             val date = Date(selection)
-            val dateEditText = findViewById<TextInputEditText>(R.id.dateEditText)
-            dateEditText.setText(dateFormat.format(date))
+//            val dateEditText = findViewById<TextInputEditText>(R.id.dateEditText)
+//            dateEditText.setText(dateFormat.format(date))
         }
 
         datePicker.show(supportFragmentManager, "DATE_PICKER")

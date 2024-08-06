@@ -23,25 +23,25 @@ class NewPassActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         viewModel = ViewModelFactory.getInstance(this).create(ForgotViewModel::class.java)
-        viewModel.getSession().observe(this) { user ->
-            userId = user.userId
-            email = user.email
-            username = user.username
+//        viewModel.getSession().observe(this) { user ->
+//            userId = user.userId
+//            email = user.email
+////            username = user.username
+//
+//        }
 
-        }
-
-        binding.loginButton.setOnClickListener {
-            val password = binding.passwordEditText.text.toString().trim()
-            val confirmPassword = binding.confirmPassEditText.text.toString().trim()
-            if (password == confirmPassword) {
-                viewModel.updateUser( userId, dataUpdate()).observe(this) { response ->
-                    if (response != null) {
-                        startActivity(Intent(this, LoginActivity::class.java))
-                        finish()
-                    }
-                }
-            }
-        }
+//        binding.loginButton.setOnClickListener {
+//            val password = binding.passwordEditText.text.toString().trim()
+//            val confirmPassword = binding.confirmPassEditText.text.toString().trim()
+//            if (password == confirmPassword) {
+//                viewModel.updateUser( userId, dataUpdate()).observe(this) { response ->
+//                    if (response != null) {
+//                        startActivity(Intent(this, LoginActivity::class.java))
+//                        finish()
+//                    }
+//                }
+//            }
+//        }
 
 
     }
