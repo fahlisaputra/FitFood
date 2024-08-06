@@ -52,7 +52,7 @@
     <string name="guest_welcome">Selamat Datang di FitFood</string>
     <string name="bmi_card">Berat Badan Ideal</string>
     <string name="bmi_desc">Pastikan asupan kalori Anda memenuhi kebutuhan kalori harian Anda.</string>
-    <string name="recomend_for_you">Rekomendasi untuk kamu</string>
+    <string name="recomend_for_you">Rekomendasi Untukmu</string>
 
     <string name="dummy_artikel_headline">Pola Hidup Sehat Untuk Menjaga Berat Badan Ideal</string>
     <string name="home_artikel">Artikel</string>
@@ -122,7 +122,7 @@
     <string name="title_artikel">Pola Hidup Sehat Untuk Menjaga Berat Badan Ideal</string>
     <string name="desc_artikel">Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia.
 </string>
-    <string name="title_artikel_page">Sedang Trending</string>
+    <string name="title_artikel_page">Artikel Rekomendasi</string>
 
 
     <string name="berat_sasaran_title">Masukan Berat Sasaran</string>
@@ -177,6 +177,11 @@
     <string name="take_picture">Take Picture</string>
     <string name="detection_process">Detection Process</string>
     <string name="calorie_detection_results">Calorie Detection Results</string>
-    <string name="try_now">Try Now</string>
+    <string name="try_now">Coba Sekarang</string>
+    <string name="see_more">Selengkapnya…</string>
+    <string name="article_date">17, Juli 2024</string>
+    <string name="_5000_langkah_perhari">5000 Langkah Perhari</string>
+    <string name="dont_have_food">Kamu Belum Punya Makanan</string>
+    <string name="descDontHaveFood">Tambahkan makanan anda terlebih dahulu dan lakukan cek rekomendasi makanan tersebut untukmu.</string>
 
 </resources>

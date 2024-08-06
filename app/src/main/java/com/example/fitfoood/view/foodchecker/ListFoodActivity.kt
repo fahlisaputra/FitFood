@@ -4,6 +4,7 @@ import android.app.Activity
 import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -75,8 +76,12 @@ class ListFoodActivity : AppCompatActivity() {
         tbTitle.text = getString(R.string.food_list)
 
         if (intent.getBooleanExtra("noPrediction", false)) {
-            showNoPredictionDialog()
+//            showNoPredictionDialog()
+            binding.dontHaveFoodContainer.visibility = View.VISIBLE
+            binding.btnSearchFood.visibility = View.GONE
         } else {
+            binding.dontHaveFoodContainer.visibility = View.GONE
+            binding.btnSearchFood.visibility = View.VISIBLE
             val initialLabels = intent.getStringArrayListExtra("resultLabels") ?: emptyList()
             foodList.addAll(initialLabels.mapNotNull { label ->
                 calorieMap[label]?.let { ListFood(R.drawable.ic_food, label, "$it kcal", "100 gr") }
@@ -89,7 +94,7 @@ class ListFoodActivity : AppCompatActivity() {
             finish()
         }
 
-        binding.cardViewAddFood.setOnClickListener { startAddFood() }
+        binding.btnSearchFood.setOnClickListener { startAddFood() }
         binding.cekRecButton.setOnClickListener { startCekRecom() }
     }
 

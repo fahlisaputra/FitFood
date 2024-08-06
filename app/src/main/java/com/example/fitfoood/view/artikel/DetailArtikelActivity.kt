@@ -2,7 +2,6 @@ package com.example.fitfoood.view.artikel
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
 import androidx.core.os.BundleCompat
 import com.bumptech.glide.Glide
 import com.example.fitfoood.R
@@ -26,13 +25,7 @@ class DetailArtikelActivity : AppCompatActivity() {
         val article : ArticleItem = BundleCompat.getParcelable(intent.extras!!, Constants.EXTRA_ARTICLE, ArticleItem::class.java) as ArticleItem
         showArticleDetails(article)
 
-        binding.toolbar.setNavigationOnClickListener {
-            onBackPressed()
-        }
-        val tbTitle = findViewById<TextView>(R.id.title_toolbar)
-        tbTitle.text = "Artikel Detail"
-
-        binding.toolbar.setOnClickListener {
+        binding.btnBack.setOnClickListener {
             finish()
         }
     }

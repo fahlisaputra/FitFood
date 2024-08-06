@@ -52,7 +52,7 @@
     <string name="guest_welcome">Welcome to FitFood</string>
     <string name="bmi_card">Ideal Weight</string>
     <string name="bmi_desc">Make sure your calorie intake meets your daily calorie needs.</string>
-    <string name="recomend_for_you">Recommendations for you</string>
+    <string name="recomend_for_you">Recommendations For You</string>
 
     <string name="dummy_artikel_headline">Healthy Lifestyle to Maintain Ideal Body Weight</string>
     <string name="home_artikel">Article</string>
@@ -180,6 +180,11 @@
     <string name="detection_process">Detection Process</string>
     <string name="calorie_detection_results">Calorie Detection Results</string>
     <string name="try_now">Try Now</string>
+    <string name="see_more">See more...</string>
+    <string name="article_date">17, Juli 2024</string>
+    <string name="_5000_langkah_perhari">5000 Langkah Perhari</string>
+    <string name="dont_have_food">You Don\'t Have Any Food</string>
+    <string name="descDontHaveFood">Add your food first and check the food recommendations for you.</string>
 
 </resources>
 

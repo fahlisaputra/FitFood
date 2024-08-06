@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/CardView"
-    android:layout_width="175dp"
-    android:layout_height="180dp"
+    android:layout_width="164dp"
+    android:layout_height="178dp"
     android:layout_margin="10dp"
     app:cardCornerRadius="20dp"
     android:background="#00000000"
@@ -16,11 +16,11 @@
 
         <TextView
             android:id="@+id/dummywoname"
-            style="@style/SubHeading2_Bold"
-            android:layout_width="138dp"
-            android:layout_height="22dp"
+            style="@style/SubHeading2_Poppins_SemiBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="12dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="5dp"
             android:text="@string/dummy_wo_name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.64"
@@ -30,17 +30,24 @@
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imgwodummy"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="123dp"
             android:scaleType="centerCrop"
-            android:layout_margin="18dp"
+            android:elevation="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:src="@drawable/img_wo_dummy" />
 
-
-
+        <TextView
+            style="@style/Body2_Poppins_Light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_5000_langkah_perhari"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toStartOf="@+id/dummywoname"
+            app:layout_constraintTop_toBottomOf="@+id/dummywoname" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
