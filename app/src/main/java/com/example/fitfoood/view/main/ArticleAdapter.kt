@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.fitfoood.data.response.ArticleItem
 import com.example.fitfoood.databinding.ArtikelRowBinding
+import com.example.fitfoood.utils.Constants
 import com.example.fitfoood.view.artikel.DetailArtikelActivity
 
 class ArticleAdapter(private var listItem: List<ArticleItem>) : RecyclerView.Adapter<ArticleAdapter.ViewHolder>() {
@@ -43,13 +44,13 @@ class ArticleAdapter(private var listItem: List<ArticleItem>) : RecyclerView.Ada
 
                 holder.itemView.setOnClickListener {
                         val intent = Intent(holder.itemView.context, DetailArtikelActivity::class.java)
-                        intent.putExtra("Artikel", article)
+                        intent.putExtra(Constants.EXTRA_ARTICLE, article)
                         holder.itemView.context.startActivity(intent)
                 }
         }
 
-        fun updateData(newList: List<ArticleItem>) {
-                listItem = newList
-                notifyDataSetChanged()
-        }
+//        fun updateData(newList: List<ArticleItem>) {
+//                listItem = newList
+//                notifyDataSetChanged()
+//        }
 }
