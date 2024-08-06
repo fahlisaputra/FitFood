@@ -121,8 +121,8 @@ class ArticleActivity : AppCompatActivity() {
         override fun createFragment(position: Int): Fragment {
             val filteredArticles = when (position) {
                 0 -> articles // Show all articles for the "All" tab
-                1 -> articles.filter { it.category.equals("hidup-sehat", ignoreCase = true) }
-                2 -> articles.filter { it.category.equals("olahraga", ignoreCase = true) }
+                1 -> articles.filter { it.category.equals("healthy_life", ignoreCase = true) }
+                2 -> articles.filter { it.category.equals("workout", ignoreCase = true) }
                 else -> articles
             }
             return ContentFragment.newInstance(filteredArticles)

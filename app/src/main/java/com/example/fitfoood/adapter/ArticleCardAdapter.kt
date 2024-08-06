@@ -37,8 +37,8 @@ class ArticleCardAdapter(private var listItem: List<ArticleItem>) : RecyclerView
                                 .into(binding.imgPhoto)
 
                         val categoryIcon = when (article.category) {
-                                "hidup-sehat" -> R.drawable.icon_hidupsehat
-                                "olahraga" -> R.drawable.icon_olahraga
+                                "healthy_life" -> R.drawable.icon_hidupsehat
+                                "workout" -> R.drawable.icon_olahraga
                                 else -> R.drawable.icon_hidupsehat // Optional default icon
                         }
                         binding.idCategoryArtikel.setImageResource(categoryIcon)
