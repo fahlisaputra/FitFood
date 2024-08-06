@@ -14,6 +14,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.fitfoood.adapter.ArticleCardAdapter
 import com.example.fitfoood.data.ApiResponse
 import com.example.fitfoood.databinding.FragmentHomeBinding
 import com.example.fitfoood.view.ViewModelFactory
@@ -27,9 +28,7 @@ class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
     private lateinit var viewModel: HomeViewModel
-    private lateinit var token: String
     private lateinit var label:String
-    private lateinit var idhealth: String
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,9 +40,6 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        token = "your_token_here" // Retrieve or set your token here
-
         viewModel = ViewModelFactory.getInstance(requireContext()).create(HomeViewModel::class.java)
 
         viewModel.getUser().observe(viewLifecycleOwner) { user ->
@@ -51,30 +47,15 @@ class HomeFragment : Fragment() {
             binding.tvItem.text = "Hai, $username"
         }
 
-        showRecyclerList()
+        viewModel.getProfile().observe(viewLifecycleOwner) { profile ->
+            label = profile.bmiLabel ?: "ideal"
+            val labelUp = label.uppercase()
+            binding.textViewBMICard.text = labelUp
 
-//        homeViewModel.getSession().observe(viewLifecycleOwner) { user ->
-//            token = user.token
-//            idhealth = user.userId
-//            val username = user.username.split(" ").firstOrNull() ?: user.username // Ambil kata pertama atau username jika tidak ada spasi
-//            binding.tvItem.text = "Hai, $username"
-//
-//            homeViewModel.getSessionBMI().observe(viewLifecycleOwner){result->
-//                label = result.label
-//                if(label == "") {
-//                    label = "ideal"
-//                }
-//                val labelUp = label.toUpperCase()
-//                binding.textViewBMICard.text = labelUp
-//
-//                showRecyclerList()
-//            }
-////            fetchBMIData()
-//            loadProfilePicture()
-//        }
+            showRecyclerList()
+        }
 
-
-
+        loadProfilePicture()
 
 
         binding.apply {
@@ -93,31 +74,11 @@ class HomeFragment : Fragment() {
                 } else {
                     requestCameraPermission()
                 }
-                false // Return false to indicate the item is not selected
             }
 
 
         }
     }
-
-//    private fun fetchBMIData() {
-//        homeViewModel.getBMI(token, idhealth ).observe(viewLifecycleOwner){result->
-//            when(result){
-//                is ApiResponse.Success -> {
-//                    val bmiData = result.data?.data?.firstOrNull()
-//                    if (bmiData != null) {
-//                        binding.textViewBMICard.text = bmiData.label
-//                    }
-//                }
-//                is ApiResponse.Error -> {
-//                    // Handle error
-//                }
-//                is ApiResponse.Loading -> {
-//                    // Show loading
-//                }
-//            }
-//        }
-//    }
 
     private fun loadProfilePicture() {
         val sharedPreferences = requireContext().getSharedPreferences("ProfilePrefs", Context.MODE_PRIVATE)
@@ -133,9 +94,9 @@ class HomeFragment : Fragment() {
         viewModel.getArticles().observe(viewLifecycleOwner) { articles ->
             when (articles) {
                 is ApiResponse.Success -> {
-                    val list = articles.data?.data?.articles ?: listOf()
-//                    list = list.filter { it.label == label }
-                    val adapter = ArticleAdapter(list)
+                    var list = articles.data?.data?.articles ?: listOf()
+                    list = list.filter { it.label == label }
+                    val adapter = ArticleCardAdapter(list)
                     with(binding.recyclerView) {
                         layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
                         setHasFixedSize(true)

@@ -11,6 +11,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fitfoood.MainActivity
 import com.example.fitfoood.data.ApiResponse
+import com.example.fitfoood.data.pref.ProfileModel
 import com.example.fitfoood.data.pref.TokenModel
 import com.example.fitfoood.data.pref.UserModel
 import com.example.fitfoood.databinding.ActivityLoginBinding
@@ -124,6 +125,18 @@ class LoginActivity : AppCompatActivity() {
                                 user?.id
                             )
                         )
+
+                        viewModel.saveProfile(
+                            ProfileModel(
+                                user?.profile?.birthDate,
+                                user?.profile?.gender,
+                                user?.profile?.height,
+                                user?.profile?.weight,
+                                user?.profile?.bmiIndex,
+                                user?.profile?.bmiLabel
+                            )
+                        )
+
                         startActivity(Intent(this, MainActivity::class.java))
                         finish()
                         return@observe
