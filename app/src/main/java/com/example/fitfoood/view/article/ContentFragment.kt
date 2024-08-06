@@ -1,4 +1,4 @@
-package com.example.fitfoood.view.artikel
+package com.example.fitfoood.view.article
 
 import android.os.Bundle
 import android.util.Log

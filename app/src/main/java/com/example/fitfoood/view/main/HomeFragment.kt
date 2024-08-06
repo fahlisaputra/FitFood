@@ -18,7 +18,7 @@ import com.example.fitfoood.adapter.ArticleCardAdapter
 import com.example.fitfoood.data.ApiResponse
 import com.example.fitfoood.databinding.FragmentHomeBinding
 import com.example.fitfoood.view.ViewModelFactory
-import com.example.fitfoood.view.artikel.ArtikelActivity
+import com.example.fitfoood.view.article.ArticleActivity
 import com.example.fitfoood.view.foodchecker.CameraActivity
 import com.example.fitfoood.view.foodrecomendation.FoodActivity
 import com.example.fitfoood.view.main.HomeViewModel
@@ -66,7 +66,7 @@ class HomeFragment : Fragment() {
                 startActivity(Intent(requireContext(), WorkOutActivity::class.java))
             }
             homeSeeAll.setOnClickListener {
-                startActivity(Intent(requireContext(), ArtikelActivity::class.java))
+                startActivity(Intent(requireContext(), ArticleActivity::class.java))
             }
             btnTrynow.setOnClickListener{
                 if (allPermissionsGranted()) {
