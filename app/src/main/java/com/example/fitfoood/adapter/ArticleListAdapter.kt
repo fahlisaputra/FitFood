@@ -1,4 +1,4 @@
-package com.example.fitfoood.view.artikel
+package com.example.fitfoood.adapter
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -6,19 +6,18 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.fitfoood.R
-import com.example.fitfoood.data.response.ArtikelResponseItem
+import com.example.fitfoood.data.response.ArticleItem
 import com.example.fitfoood.databinding.Artikel2RowBinding
-import com.example.fitfoood.databinding.ArtikelRowBinding
 import com.example.fitfoood.view.artikel.DetailArtikelActivity
 
-class Artikel2Adapter(private var listItem: List<ArtikelResponseItem>) : RecyclerView.Adapter<Artikel2Adapter.ViewHolder>() {
+class ArticleListAdapter(private var listItem: List<ArticleItem>) : RecyclerView.Adapter<ArticleListAdapter.ViewHolder>() {
 
     class ViewHolder(private val binding: Artikel2RowBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(artikel: ArtikelResponseItem) {
+        fun bind(artikel: ArticleItem) {
             binding.tvName.text = artikel.title
 
             Glide.with(binding.root)
-                .load(artikel.imageUrl)
+                .load(artikel.thumbnail)
                 .into(binding.imgPhoto)
 
             val categoryIcon = when (artikel.category) {
@@ -48,10 +47,5 @@ class Artikel2Adapter(private var listItem: List<ArtikelResponseItem>) : Recycle
             intent.putExtra("Artikel", artikel)
             holder.itemView.context.startActivity(intent)
         }
-    }
-
-    fun updateData(newList: List<ArtikelResponseItem>) {
-        listItem = newList
-        notifyDataSetChanged()
     }
 }
