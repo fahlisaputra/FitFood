@@ -73,10 +73,6 @@ class HomeFragment : Fragment() {
 //            loadProfilePicture()
 //        }
 
-
-
-
-
         binding.apply {
             btnFoodRecomendation.setOnClickListener {
                 startActivity(Intent(requireContext(), FoodActivity::class.java))
