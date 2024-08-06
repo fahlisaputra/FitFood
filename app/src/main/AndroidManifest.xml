@@ -49,10 +49,10 @@
             android:name=".view.notification.NotificationActivity"
             android:exported="false" />
         <activity
-            android:name=".view.artikel.DetailArtikelActivity"
+            android:name=".view.article.ArticleDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".view.artikel.ArtikelActivity"
+            android:name=".view.article.ArticleActivity"
             android:exported="false" />
         <activity
             android:name=".view.foodrecomendation.FoodActivity"
@@ -93,11 +93,11 @@
             android:name=".view.foodchecker.CameraActivity"
             android:exported="false" />
         <activity
-            android:name=".view.artikel.DetailArtikelActivity"
+            android:name=".view.article.ArticleDetailActivity"
             android:exported="false"
             tools:ignore="DuplicateActivity" />
         <activity
-            android:name=".view.artikel.ArtikelActivity"
+            android:name=".view.article.ArticleActivity"
             android:exported="false"
             tools:ignore="DuplicateActivity" />
         <activity

@@ -1,5 +1,6 @@
 package com.example.fitfoood.data.response
 
+import com.example.fitfoood.data.pref.ProfileModel
 import com.google.gson.annotations.SerializedName
 
 /**
@@ -51,6 +52,9 @@ data class UserModel(
 
 	@field:SerializedName("name")
 	val name: String? = null,
+
+	@field:SerializedName("profile")
+	val profile: ProfileModel? = null
 )
 
 data class DateOfBirth(

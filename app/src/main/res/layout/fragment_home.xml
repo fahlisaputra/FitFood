@@ -437,7 +437,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView3"
                 tools:ignore="MissingConstraints"
-                tools:listitem="@layout/artikel_row" />
+                tools:listitem="@layout/article_row_card" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
