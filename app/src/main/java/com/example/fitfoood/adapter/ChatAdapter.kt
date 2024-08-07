@@ -3,12 +3,12 @@ package com.example.fitfoood.adapter
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.view.marginTop
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.fitfoood.data.models.ChatModel
 import com.example.fitfoood.databinding.ItemMessageAnotherUserBinding
 import com.example.fitfoood.databinding.ItemMessageLocalBinding
+import com.example.fitfoood.utils.DateTime
 
 class ChatAdapter : RecyclerView.Adapter<ViewHolder>() {
 
@@ -59,7 +59,7 @@ class ChatAdapter : RecyclerView.Adapter<ViewHolder>() {
             binding.apply {
                 chat.also {
                     tvUserMessageText.text = chat.message
-                    timeAI.text = chat.time
+                    timeAI.text = DateTime(chat.time).getTime()
 
                     if (pos == 0) {
                         val param = tvUserMessageText.layoutParams as ViewGroup.MarginLayoutParams
@@ -76,7 +76,7 @@ class ChatAdapter : RecyclerView.Adapter<ViewHolder>() {
             binding.apply {
                 chat.also {
                     tvUserMessageText.text = chat.message
-                    timeUser.text = chat.time
+                    timeUser.text = DateTime(chat.time).getTime()
 
                     if (pos == 0) {
                         val param = tvUserMessageText.layoutParams as ViewGroup.MarginLayoutParams

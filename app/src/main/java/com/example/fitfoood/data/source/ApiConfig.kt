@@ -11,7 +11,7 @@ object ApiConfig {
     /**
      * Base URL for API
      */
-    private const val BASE_URL = "https://fit-meals-web.vercel.app/api/"
+    private const val BASE_URL = "http://2.2.2.5:3000/api/"
 
     /**
      * Provide OkHttp builder with logging interceptor

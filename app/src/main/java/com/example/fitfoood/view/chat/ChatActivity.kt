@@ -3,18 +3,17 @@ package com.example.fitfoood.view.chat
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.fitfoood.adapter.ArticleCardAdapter
 import com.example.fitfoood.adapter.ChatAdapter
+import com.example.fitfoood.data.ApiResponse
 import com.example.fitfoood.data.models.ChatModel
 import com.example.fitfoood.databinding.ActivityChatBinding
+import com.example.fitfoood.utils.DateTime
 import com.example.fitfoood.view.ViewModelFactory
-import com.example.fitfoood.view.main.HomeViewModel
 
 class ChatActivity : AppCompatActivity() {
     private lateinit var binding: ActivityChatBinding
     private lateinit var viewModel: ChatViewModel
     private lateinit var chatAdapter: ChatAdapter
-    private val chatList = mutableListOf<ChatModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,7 +32,9 @@ class ChatActivity : AppCompatActivity() {
             }
         }
 
+
         setupRecyclerView()
+        retrieveOldMessages()
     }
 
     private fun setupRecyclerView() {
@@ -44,9 +45,41 @@ class ChatActivity : AppCompatActivity() {
         }
     }
 
+    private fun retrieveOldMessages() {
+        viewModel.getMessages().observe(this) { result ->
+            when(result) {
+                is ApiResponse.Loading -> {}
+                is ApiResponse.Error -> {}
+                is ApiResponse.Success -> {
+                    val messages = result.data?.data?.messages
+                    messages?.forEach {
+                        var type = "outgoing"
+                        if (it.userId == "BOT") {
+                            type = "incoming"
+                        }
+                        val time = DateTime.fromUTC(it.createdAt ?: "").toString()
+                        val chatModel = ChatModel(type, it.text ?: "", time)
+                        chatAdapter.addChat(chatModel)
+                    }
+                }
+            }
+        }
+    }
     private fun sendMessage(message: String) {
-        val chatModel = ChatModel("outgoing", message, "12:00")
-        chatList.add(chatModel)
+        val chatModel = ChatModel("outgoing", message, DateTime.now().toString())
         chatAdapter.addChat(chatModel)
+        binding.rvChatHistory.scrollToPosition(chatAdapter.itemCount - 1)
+
+        viewModel.sendMessage(message).observe(this) {result ->
+            when(result) {
+                is ApiResponse.Loading -> {}
+                is ApiResponse.Error -> {}
+                is ApiResponse.Success -> {
+                    val responseChat = ChatModel("incoming", result.data?.data?.botResponse?.text ?: "", DateTime.now().toString())
+                    chatAdapter.addChat(responseChat)
+                    binding.rvChatHistory.scrollToPosition(chatAdapter.itemCount - 1)
+                }
+            }
+        }
     }
 }
