@@ -61,6 +61,8 @@ class ChatActivity : AppCompatActivity() {
                         val chatModel = ChatModel(type, it.text ?: "", time)
                         chatAdapter.addChat(chatModel)
                     }
+
+                    binding.rvChatHistory.scrollToPosition(chatAdapter.itemCount - 1)
                 }
             }
         }
