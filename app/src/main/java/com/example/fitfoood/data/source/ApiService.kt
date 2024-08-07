@@ -5,9 +5,11 @@ import com.example.fitfoood.data.response.ArticleResponse
 import com.example.fitfoood.data.response.ArtikelResponseItem
 import com.example.fitfoood.data.response.BMI
 import com.example.fitfoood.data.response.BMIRecomendationResponse
+import com.example.fitfoood.data.response.ChatHistoryResponse
 import com.example.fitfoood.data.response.FoodBMIResponseItem
 import com.example.fitfoood.data.response.GetBMIResponse
 import com.example.fitfoood.data.response.PostBMIResponse
+import com.example.fitfoood.data.response.SendChatResponse
 import com.example.fitfoood.data.response.SignInResponse
 import com.example.fitfoood.data.response.SignUpResponse
 import com.example.fitfoood.data.response.UserResponse
@@ -46,6 +48,14 @@ interface ApiService {
     @GET("article")
     fun getArticles(): Call<ArticleResponse>
 
+    @FormUrlEncoded
+    @POST("v2/chat")
+    fun sendChatMessage(
+        @Field("message") message: String
+    ): Call<SendChatResponse>
+
+    @GET("v2/chat")
+    fun getChatMessages(): Call<ChatHistoryResponse>
 
     @GET("/api/getArticle")
     fun getAllArticle(

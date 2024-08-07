@@ -183,5 +183,9 @@
     <string name="_5000_langkah_perhari">5000 Langkah Perhari</string>
     <string name="dont_have_food">Kamu Belum Punya Makanan</string>
     <string name="descDontHaveFood">Tambahkan makanan anda terlebih dahulu dan lakukan cek rekomendasi makanan tersebut untukmu.</string>
+    <string name="input_text_hint">Ketik pesan</string>
+    <string name="switch_user_text">Switch User</string>
+    <string name="fitfood_ai">FitFood AI</string>
+    <string name="dummy_time">12.50 PM</string>
 
 </resources>
