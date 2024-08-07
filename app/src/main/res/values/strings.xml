@@ -164,9 +164,8 @@
     <string name="desc_bmi">You are overweight</string>
     <string name="tb_sekarang_desc">Current Height</string>
     <string name="tb_sekarang_text">170cm</string>
-    <string name="berat_sekarang_title">Enter the current weight</string>
-    <string name="tb_sekarang_title">Enter the current height</string>
-    <string name="bb_sekarang_title">Enter the current weight</string>
+    <string name="tb_sekarang_title">Enter Height</string>
+    <string name="bb_sekarang_title">Enter Weight</string>
 
 
     <string name="message_input_bmi">Enter your height and weight to calculate your BMI</string>
@@ -186,11 +185,17 @@
     <string name="dont_have_food">You Don\'t Have Any Food</string>
     <string name="descDontHaveFood">Add your food first and check the food recommendations for you.</string>
     <string name="input_text_hint">Type a message</string>
-    <string name="send_message_text">Send</string>
     <string name="switch_user_text">Switch User</string>
     <string name="fitfood_ai">FitFood AI</string>
     <string name="today">Today</string>
     <string name="dummy_time">12.50 PM</string>
+    <string name="berat_awal">Initial Weight</string>
+    <string name="berat_sasaran">Target Weight</string>
+    <string name="weight_progress">Weight Progress</string>
+    <string name="weight_record">Weight Record</string>
+    <string name="date_dummy">Sabtu, 20 Juli 2024</string>
+    <string name="tambahkan_berat">Add Weight</string>
+    <string name="kg">kg</string>
 
 </resources>
 

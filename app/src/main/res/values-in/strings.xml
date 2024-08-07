@@ -88,7 +88,7 @@
     <string name="bb_sekarang_desc">Berat Saat Ini</string>
     <string name="bb_sasaran_text">50 kg</string>
     <string name="bb_sasaran_desc">Berat Sasaran</string>
-    <string name="tambah_berat">Tambahkan Berat</string>
+    <string name="tambah_berat">Tambah Berat</string>
     <string name="ups">Ups!</string>
     <string name="desc_ups">Maaf, makananmu tidak terdeteksi.</string>
     <string name="desc_logout">Apakah kamu yakin ingin keluar?</string>
@@ -163,9 +163,8 @@
     <string name="desc_bmi">Berat badan Anda kelebihan</string>
     <string name="tb_sekarang_desc">Tinggi Badan Saat Ini</string>
     <string name="tb_sekarang_text">170cm</string>
-    <string name="berat_sekarang_title">Masukkan berat badan saat ini</string>
-    <string name="tb_sekarang_title">Masukkan tinggi badan saat ini</string>
-    <string name="bb_sekarang_title">Masukkan berat badan saat ini</string>
+    <string name="tb_sekarang_title">Masukkan Tinggi Badan</string>
+    <string name="bb_sekarang_title">Masukkan Berat Badan</string>
 
     <string name="message_input_bmi">Masukkan tinggi dan berat badan Anda</string>
     <string name="message_input_weight">Masukkan berat badan Anda</string>
@@ -187,5 +186,13 @@
     <string name="switch_user_text">Switch User</string>
     <string name="fitfood_ai">FitFood AI</string>
     <string name="dummy_time">12.50 PM</string>
+    <string name="berat_awal">Berat Awal</string>
+    <string name="today">Hari Ini</string>
+    <string name="berat_sasaran">Berat Sasaran</string>
+    <string name="weight_progress">Kemajuan Berat Badan</string>
+    <string name="weight_record">Catatan Berat Badan</string>
+    <string name="date_dummy">Sabtu, 20 Juli 2024</string>
+    <string name="tambahkan_berat">Tambahkan Berat</string>
+    <string name="kg">kg</string>
 
 </resources>

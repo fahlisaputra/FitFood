@@ -23,6 +23,7 @@ import com.example.fitfoood.view.main.HomeViewModel
 import com.example.fitfoood.view.main.PopupWindowBeratSekarang
 import com.example.fitfoood.view.main.PopupWindowTinggiSekarang
 import com.example.fitfoood.view.setting.LogoutFragment
+import com.example.fitfoood.view.weighttracker.WeightTrackerFragment
 
 class ProfileFragment : Fragment(), View.OnClickListener {
 
@@ -68,6 +69,7 @@ class ProfileFragment : Fragment(), View.OnClickListener {
 
         binding.cardViewAccount.setOnClickListener(this)
         binding.cardViewReminder.setOnClickListener(this)
+        binding.cardViewWeightTracker.setOnClickListener(this)
         binding.cardViewLanguage.setOnClickListener { startActivity(Intent(Settings.ACTION_LOCALE_SETTINGS)) }
         binding.cardViewLogout.setOnClickListener {
             val showPopUp = LogoutFragment()
@@ -139,6 +141,17 @@ class ProfileFragment : Fragment(), View.OnClickListener {
                         R.id.fragment_container,
                         reminderFragment,
                         ReminderFragment::class.java.simpleName
+                    )
+                }
+            }
+            R.id.cardViewWeightTracker -> {
+                val weightTrackerFragment = WeightTrackerFragment()
+                parentFragmentManager.commit {
+                    addToBackStack(null)
+                    replace(
+                        R.id.fragment_container,
+                        weightTrackerFragment,
+                        WeightTrackerFragment::class.java.simpleName
                     )
                 }
             }

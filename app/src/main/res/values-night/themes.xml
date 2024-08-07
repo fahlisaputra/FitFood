@@ -60,6 +60,11 @@
         <item name="fontFamily">@font/montserrat_regular</item>
         <item name="color">@color/white</item>
     </style>
+    <style name="SubHeading3_Regular">
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/montserrat_regular</item>
+        <item name="color">@color/white</item>
+    </style>
     <style name="SubHeading2_Regular">
         <item name="android:textSize">13sp</item>
         <item name="fontFamily">@font/montserrat_regular</item>
@@ -122,8 +127,18 @@
         <item name="fontFamily">@font/montserrat_bold</item>
         <item name="color">@color/white</item>
     </style>
-    <style name="SubHeading1_Bold">
+    <style name="SubHeading3_Bold">
         <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/montserrat_bold</item>
+        <item name="color">@color/white</item>
+    </style>
+    <style name="SubHeading1_Bold">
+        <item name="android:textSize">15sp</item>
+        <item name="fontFamily">@font/montserrat_bold</item>
+        <item name="color">@color/white</item>
+    </style>
+    <style name="SubHeading4_Bold">
+        <item name="android:textSize">16sp</item>
         <item name="fontFamily">@font/montserrat_bold</item>
         <item name="color">@color/white</item>
     </style>
@@ -191,6 +206,16 @@
     </style>
     <style name="SubHeading1_Poppins_Bold">
         <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="color">@color/white</item>
+    </style>
+    <style name="SubHeading5_Poppins_SemiBold">
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="color">@color/white</item>
+    </style>
+    <style name="SubHeading3_Poppins_Bold">
+        <item name="android:textSize">15sp</item>
         <item name="fontFamily">@font/poppins_bold</item>
         <item name="color">@color/white</item>
     </style>
@@ -298,7 +323,7 @@
         <item name="color">@color/white</item>
     </style>
     <style name="SubHeading3_Poppins_Regular">
-        <item name="android:textSize">15sp</item>
+        <item name="android:textSize">16sp</item>
         <item name="fontFamily">@font/poppins_regular</item>
         <item name="color">@color/white</item>
     </style>

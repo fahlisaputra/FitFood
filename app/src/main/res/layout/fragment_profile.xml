@@ -56,100 +56,111 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/bmiNumber" />
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/btn_berat_sekarang"
+                    <LinearLayout
+                        android:id="@+id/tinggiBerat"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginStart="40dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="24dp"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/descBMI">
 
-                        <ImageView
-                            android:id="@+id/bg_berat_sekarang"
-                            android:layout_width="154dp"
-                            android:layout_height="70dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/bg_current_weight" />
-
-                        <TextView
-                            android:id="@+id/bb_sekarang_text"
-                            style="@style/SubHeading1_Bold"
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/btn_berat_sekarang"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="15dp"
-                            android:text="@string/bb_sekarang_text"
-                            android:textColor="@color/white"
-                            app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            app:layout_constraintTop_toBottomOf="@+id/descBMI">
 
-                        <TextView
-                            android:id="@+id/bg_berat_sekarang_desc"
-                            style="@style/Body1_Regular"
+                            <ImageView
+                                android:id="@+id/bg_berat_sekarang"
+                                android:layout_width="154dp"
+                                android:layout_height="70dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/bg_current_weight" />
+
+                            <TextView
+                                android:id="@+id/bb_sekarang_text"
+                                style="@style/SubHeading1_Bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="@string/bb_sekarang_text"
+                                android:textColor="@color/white"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/bg_berat_sekarang_desc"
+                                style="@style/Body1_Regular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="24dp"
+                                android:text="@string/bb_sekarang_desc"
+                                android:textColor="@color/white"
+                                android:textSize="11sp"
+                                app:layout_constraintEnd_toEndOf="@+id/bg_berat_sekarang"
+                                app:layout_constraintHorizontal_bias="0.51"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/bb_sekarang_text" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/btn_tinggi_sekarang"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="24dp"
-                            android:text="@string/bb_sekarang_desc"
-                            android:textColor="@color/white"
-                            android:textSize="11sp"
-                            app:layout_constraintEnd_toEndOf="@+id/bg_berat_sekarang"
-                            app:layout_constraintHorizontal_bias="0.51"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/bb_sekarang_text" />
+                            android:layout_marginStart="8dp"
+                            app:layout_constraintStart_toEndOf="@+id/btn_berat_sekarang"
+                            app:layout_constraintTop_toTopOf="@+id/btn_berat_sekarang">
 
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                    
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/btn_tinggi_sekarang"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        app:layout_constraintStart_toEndOf="@+id/btn_berat_sekarang"
-                        app:layout_constraintTop_toTopOf="@+id/btn_berat_sekarang">
+                            <ImageView
+                                android:id="@+id/bg_tinggi_sekarang"
+                                android:layout_width="154dp"
+                                android:layout_height="70dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.0"
+                                app:srcCompat="@drawable/bg_current_height" />
 
-                        <ImageView
-                            android:id="@+id/bg_tinggi_sekarang"
-                            android:layout_width="154dp"
-                            android:layout_height="70dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.0"
-                            app:srcCompat="@drawable/bg_current_height" />
+                            <TextView
+                                android:id="@+id/tb_sekarang_text"
+                                style="@style/SubHeading1_Bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:text="@string/tb_sekarang_text"
+                                android:textColor="@color/white"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.504"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
 
-                        <TextView
-                            android:id="@+id/tb_sekarang_text"
-                            style="@style/SubHeading1_Bold"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="16dp"
-                            android:text="@string/tb_sekarang_text"
-                            android:textColor="@color/white"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.504"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            <TextView
+                                android:id="@+id/bg_tinggi_sekarang_desc"
+                                style="@style/Body1_Regular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="24dp"
+                                android:text="@string/tb_sekarang_desc"
+                                android:textColor="@color/white"
+                                android:textSize="11sp"
+                                app:layout_constraintEnd_toEndOf="@+id/bg_tinggi_sekarang"
+                                app:layout_constraintHorizontal_bias="0.51"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/tb_sekarang_text" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
 
-                        <TextView
-                            android:id="@+id/bg_tinggi_sekarang_desc"
-                            style="@style/Body1_Regular"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="24dp"
-                            android:text="@string/tb_sekarang_desc"
-                            android:textColor="@color/white"
-                            android:textSize="11sp"
-                            app:layout_constraintEnd_toEndOf="@+id/bg_tinggi_sekarang"
-                            app:layout_constraintHorizontal_bias="0.51"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/tb_sekarang_text" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
+
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cardViewAccount"
@@ -158,7 +169,7 @@
                         android:layout_marginTop="48dp"
                         android:layout_marginStart="32dp"
                         android:layout_marginEnd="32dp"
-                        app:layout_constraintTop_toBottomOf="@+id/btn_berat_sekarang">
+                        app:layout_constraintTop_toBottomOf="@+id/tinggiBerat">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
@@ -179,7 +190,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="10dp"
-                                android:layout_marginTop="10dp"
+                                android:layout_marginTop="12dp"
                                 android:text="@string/account"
                                 app:layout_constraintStart_toEndOf="@+id/imageAccount"
                                 app:layout_constraintTop_toTopOf="parent" />
@@ -232,7 +243,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="10dp"
-                                android:layout_marginTop="10dp"
+                                android:layout_marginTop="12dp"
                                 android:text="@string/reminder"
                                 app:layout_constraintStart_toEndOf="@+id/imageReminder"
                                 app:layout_constraintTop_toTopOf="parent" />
@@ -284,7 +295,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="10dp"
-                                android:layout_marginTop="10dp"
+                                android:layout_marginTop="12dp"
                                 android:text="@string/weight_tracker"
                                 app:layout_constraintStart_toEndOf="@+id/imageWeightTracker"
                                 app:layout_constraintTop_toTopOf="parent" />
@@ -336,7 +347,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="10dp"
-                                android:layout_marginTop="10dp"
+                                android:layout_marginTop="12dp"
                                 android:text="@string/language"
                                 app:layout_constraintStart_toEndOf="@+id/imageLanguage"
                                 app:layout_constraintTop_toTopOf="parent" />
@@ -388,7 +399,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="10dp"
-                                android:layout_marginTop="10dp"
+                                android:layout_marginTop="12dp"
                                 android:text="@string/logout"
                                 app:layout_constraintStart_toEndOf="@+id/imageLogout"
                                 app:layout_constraintTop_toTopOf="parent" />
@@ -414,50 +425,61 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
-            <TextView
-                android:id="@+id/tv_name"
-                style="@style/Heading2_SemiBold"
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="60dp"
-                android:layout_marginEnd="32dp"
-                android:text="@string/profile_name"
-                android:textColor="@color/white"
+                android:layout_margin="24dp"
+                app:layout_constraintBottom_toTopOf="@+id/cardView"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.565"
-                app:layout_constraintStart_toEndOf="@+id/img_avatar"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView7"
-                style="@style/SubHeading2_Regular"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/dummy_email"
-                android:textColor="@color/white"
-                app:layout_constraintStart_toStartOf="@+id/tv_name"
-                app:layout_constraintTop_toBottomOf="@+id/tv_name" />
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/img_avatar"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="48dp"
-                android:src="@drawable/profle_photo"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:id="@+id/captureImage"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:layout_marginStart="80dp"
-                android:layout_marginTop="96dp"
-                android:backgroundTint="@color/grey_200"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_add_photo" />
+                <TextView
+                    android:id="@+id/tv_name"
+                    style="@style/Heading2_SemiBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/img_avatar"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toEndOf="@+id/img_avatar"
+                    android:text="@string/profile_name"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    style="@style/SubHeading2_Regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_name"
+                    android:layout_alignStart="@+id/tv_name"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/dummy_email"
+                    android:textColor="@color/white" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_avatar"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="32dp"
+                    android:src="@drawable/profle_photo" />
+
+                <ImageView
+                    android:id="@+id/captureImage"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignStart="@+id/img_avatar"
+                    android:layout_alignTop="@+id/img_avatar"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="48dp"
+                    android:backgroundTint="@color/grey_200"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_add_photo" />
+            </RelativeLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 </ScrollView>

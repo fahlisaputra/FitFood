@@ -36,7 +36,6 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction()
             .add(R.id.fragment_container, homeFragment, "HomeFragment")
             .add(R.id.fragment_container, profileFragment, "ProfileFragment")
-            .hide(profileFragment)  // Hide profileFragment initially
             .commit()
 
         supportFragmentManager.addOnBackStackChangedListener {
