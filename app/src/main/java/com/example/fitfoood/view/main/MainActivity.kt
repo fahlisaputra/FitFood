@@ -6,19 +6,18 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.fitfoood.databinding.ActivityMainBinding
+import com.example.fitfoood.view.chat.ChatActivity
 import com.example.fitfoood.view.foodchecker.CameraActivity
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-
     private lateinit var homeFragment: HomeFragment
     private lateinit var profileFragment: ProfileFragment
 
@@ -38,18 +37,29 @@ class MainActivity : AppCompatActivity() {
             .hide(profileFragment)  // Hide profileFragment initially
             .commit()
 
+        supportFragmentManager.addOnBackStackChangedListener {
+            updateUI()
+        }
+
+        binding.chat.setOnClickListener {
+            val intent = Intent(this, ChatActivity::class.java)
+            startActivity(intent)
+        }
+
         binding.bottomNavigation.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.navigation_home -> {
                     showFragment(homeFragment)
                     updateIcons(R.id.navigation_home)
-                    binding.chat.setVisibility(View.VISIBLE)
+                    binding.bottomNavigation.visibility = View.VISIBLE
+                    binding.chat.visibility = View.VISIBLE
                     true // Return true to indicate the item is selected
                 }
                 R.id.navigation_analysis -> {
                     if (allPermissionsGranted()) {
                         startCameraActivity()
-                        binding.chat.setVisibility(View.GONE)
+                        binding.bottomNavigation.visibility = View.GONE
+                        binding.chat.visibility = View.GONE
                     } else {
                         requestCameraPermission()
                     }
@@ -58,7 +68,8 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_profile -> {
                     showFragment(profileFragment)
                     updateIcons(R.id.navigation_profile)
-                    binding.chat.setVisibility(View.GONE)
+                    binding.chat.visibility = View.GONE
+                    binding.bottomNavigation.visibility = View.VISIBLE
                     true // Return true to indicate the item is selected
                 }
                 else -> false // Handle unknown item
@@ -72,10 +83,16 @@ class MainActivity : AppCompatActivity() {
 //        requestExactAlarmPermission()
     }
 
+    override fun onResume() {
+        super.onResume()
+        updateUI()
+    }
+
     private fun showFragment(fragment: Fragment) {
         // Replace the current fragment with the selected one
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragment_container, fragment)
+            .addToBackStack(null)
             .commit()
     }
 
@@ -116,6 +133,20 @@ class MainActivity : AppCompatActivity() {
             this,
             Manifest.permission.CAMERA
         ) == PackageManager.PERMISSION_GRANTED
+    }
+
+    private fun updateUI() {
+        val currentFragment = supportFragmentManager.findFragmentById(R.id.fragment_container)
+        if (currentFragment is HomeFragment) {
+            binding.bottomNavigation.visibility = View.VISIBLE
+            binding.chat.visibility = View.VISIBLE
+        } else if (currentFragment is ProfileFragment) {
+            binding.bottomNavigation.visibility = View.VISIBLE
+            binding.chat.visibility = View.GONE
+        } else {
+            binding.bottomNavigation.visibility = View.GONE
+            binding.chat.visibility = View.GONE
+        }
     }
 
 //    private fun requestExactAlarmPermission() {

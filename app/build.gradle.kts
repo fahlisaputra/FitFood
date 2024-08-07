@@ -55,6 +55,7 @@ dependencies {
     implementation("org.tensorflow:tensorflow-lite-support:0.4.4")
     implementation("org.tensorflow:tensorflow-lite-metadata:0.4.4")
     implementation("androidx.datastore:datastore-core-android:1.1.1")
+    implementation("androidx.compose.runtime:runtime-android:1.6.8")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
