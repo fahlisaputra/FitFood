@@ -30,7 +30,7 @@
     <string name="title_login_page">Welcome Back</string>
     <string name="name">Enter Your Name</string>
     <string name="message_main_page">Happy Learning at Dicoding.</string>
-    <string name="greeting">Hello %1$s,</string>
+    <string name="greeting">Hi, %1$s</string>
     <string name="logout">Logout</string>
     <string name="dont_have_account">Don\'t have an account?</string>
     <string name="password_repeat">Password Repeat</string>
@@ -191,6 +191,8 @@
     <string name="fitfood_ai">FitFood AI</string>
     <string name="today">Today</string>
     <string name="dummy_time">12.50 PM</string>
+
+    <string name="bmi_index_label">BMI : %1$s</string>
 
 </resources>
 

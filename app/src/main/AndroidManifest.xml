@@ -53,18 +53,13 @@
             android:name=".view.notification.NotificationActivity"
             android:exported="false" />
         <activity
-            android:name=".view.article.ArticleDetailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.article.ArticleActivity"
-            android:exported="false" />
-        <activity
             android:name=".view.foodrecomendation.FoodActivity"
             android:exported="false" />
         <activity
             android:name=".view.workoutrecomendation.WorkOutActivity"
             android:exported="false" />
         <activity
+            android:theme="@style/Base.Theme.FitFood.Transparent"
             android:name=".MainActivity"
             android:exported="true">
 
@@ -94,6 +89,7 @@
 <!--            </intent-filter>-->
         </activity>
         <activity
+            android:theme="@style/Base.Theme.FitFood.Transparent"
             android:name=".view.foodchecker.CameraActivity"
             android:exported="false" />
         <activity
@@ -101,6 +97,7 @@
             android:exported="false"
             tools:ignore="DuplicateActivity" />
         <activity
+            android:theme="@style/Base.Theme.FitFood.ArticleView"
             android:name=".view.article.ArticleActivity"
             android:exported="false"
             tools:ignore="DuplicateActivity" />
@@ -122,6 +119,7 @@
             android:name=".view.foodchecker.ResultRecActivity"
             android:exported="false" />
         <activity
+            android:theme="@style/Base.Theme.FitFood.White"
             android:name=".view.splash.SplashActivity"
             android:exported="true" >
             <intent-filter>

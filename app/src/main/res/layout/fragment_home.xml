@@ -72,8 +72,8 @@
 
                     <ImageView
                         android:id="@+id/imageView6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="8dp"
                         android:src="@drawable/ic_food"
@@ -85,7 +85,7 @@
                         style="@style/SubHeading2_SemiBold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
+                        android:layout_marginStart="16dp"
                         android:layout_marginTop="15dp"
                         android:text="@string/food"
                         android:textColor="@color/white"
@@ -103,8 +103,8 @@
 
                     <ImageView
                         android:id="@+id/imageView10"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="8dp"
                         android:src="@drawable/ic_sport"
@@ -116,7 +116,7 @@
                         style="@style/SubHeading2_SemiBold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
+                        android:layout_marginStart="16dp"
                         android:layout_marginTop="15dp"
                         android:text="@string/workout"
                         android:textColor="@color/white"
@@ -152,11 +152,11 @@
 
             <ImageView
                 android:id="@+id/imageView12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="32dp"
-                android:src="@drawable/ic_take_picture"
+                android:src="@drawable/il_take_photo"
                 app:layout_constraintStart_toStartOf="@+id/try_now"
                 app:layout_constraintTop_toTopOf="@+id/try_now" />
 
@@ -184,11 +184,11 @@
 
             <ImageView
                 android:id="@+id/imageView14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="32dp"
-                android:src="@drawable/ic_analysis"
+                android:src="@drawable/il_medical_reports"
                 app:layout_constraintStart_toEndOf="@+id/imageView13"
                 app:layout_constraintTop_toTopOf="@+id/try_now" />
 
@@ -217,11 +217,11 @@
 
             <ImageView
                 android:id="@+id/imageView16"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="35dp"
-                android:src="@drawable/ic_result"
+                android:src="@drawable/il_calorie"
                 app:layout_constraintStart_toEndOf="@+id/imageView15"
                 app:layout_constraintTop_toTopOf="@+id/try_now" />
 
@@ -293,7 +293,7 @@
                     android:layout_width="282dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="80dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="12dp"
                     android:text="@string/guest_name"
                     android:textColor="@color/white"
                     app:layout_constraintStart_toEndOf="@id/img_avatar"
@@ -305,7 +305,7 @@
                     android:layout_width="282dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="80dp"
-                    android:layout_marginTop="44dp"
+                    android:layout_marginTop="38dp"
                     android:text="@string/guest_welcome"
                     android:textColor="@color/white"
                     app:layout_constraintStart_toEndOf="@id/img_avatar"

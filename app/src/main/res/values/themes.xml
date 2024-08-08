@@ -27,6 +27,28 @@
         <item name="android:windowLightStatusBar">true</item>
     </style>
 
+    <style name="Base.Theme.FitFood.Transparent" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/navi</item>
+        <item name="colorPrimaryVariant">@color/base_blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/navy</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:enforceNavigationBarContrast" tools:targetApi="q">false</item>
+    </style>
+
+    <style name="Base.Theme.FitFood.ArticleView" parent="Base.Theme.FitFood">
+        <item name="android:statusBarColor">#F1F6F7</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
     <style name="Theme.FitFood" parent="Base.Theme.FitFood" />
     
     <style name="Heading1_Light">
