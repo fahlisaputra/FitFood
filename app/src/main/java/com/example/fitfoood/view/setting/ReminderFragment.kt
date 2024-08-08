@@ -87,7 +87,7 @@ class ReminderFragment : Fragment(), View.OnClickListener, TimePickerFragment.Di
         alarmReceiver = AlarmReceiver()
 
         val tbTitle = view.findViewById<TextView>(R.id.title_toolbar)
-        tbTitle.text = getString(R.string.reminder)
+        tbTitle.text = getString(R.string.reminder_setting)
 
         binding?.toolbar?.setOnClickListener {
             activity?.onBackPressed()

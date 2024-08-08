@@ -142,6 +142,11 @@
         <item name="fontFamily">@font/montserrat_bold</item>
         <item name="color">@color/white</item>
     </style>
+    <style name="SubHeading5_Medium">
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/montserrat_medium</item>
+        <item name="color">@color/white</item>
+    </style>
     <style name="SubHeading2_Bold">
         <item name="android:textSize">13sp</item>
         <item name="fontFamily">@font/montserrat_bold</item>
@@ -173,13 +178,13 @@
         <item name="fontFamily">@font/montserrat_semibold</item>
         <item name="color">@color/white</item>
     </style>
-    <style name="SubHeading2_SemiBold">
-        <item name="android:textSize">15sp</item>
+    <style name="SubHeading3_SemiBold">
+        <item name="android:textSize">16sp</item>
         <item name="fontFamily">@font/montserrat_semibold</item>
         <item name="color">@color/white</item>
     </style>
-    <style name="SubHeading3_SemiBold">
-        <item name="android:textSize">18sp</item>
+    <style name="SubHeading2_SemiBold">
+        <item name="android:textSize">15sp</item>
         <item name="fontFamily">@font/montserrat_semibold</item>
         <item name="color">@color/white</item>
     </style>

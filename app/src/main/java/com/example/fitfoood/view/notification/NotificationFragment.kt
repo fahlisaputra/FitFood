@@ -29,8 +29,8 @@ class NotificationFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val notificationList = listOf(
-            Notification(R.drawable.ic_eat, "Waktunya Makan!", "Lorem ipsum dolor sit amet consectetur."),
-            Notification(R.drawable.ic_alarm, "Lorem Ipsum!", "Lorem ipsum dolor sit amet consectetur."),
+            Notification(R.drawable.ic_food, "Waktunya Makan!", "Lorem ipsum dolor sit amet consectetur."),
+            Notification(R.drawable.ic_food, "Lorem Ipsum!", "Lorem ipsum dolor sit amet consectetur."),
             Notification(R.drawable.ic_weight_scales, "Timbang Berat Badanmu!", "Lorem ipsum dolor sit amet consectetur.")
             // Add more notifications
         )

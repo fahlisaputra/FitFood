@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.example.fitfoood.R
 import com.example.fitfoood.databinding.FragmentAddWeightBinding
-import com.example.fitfoood.databinding.FragmentChatBinding
 
 class AddWeightFragment : Fragment() {
     private var _binding: FragmentAddWeightBinding? = null
