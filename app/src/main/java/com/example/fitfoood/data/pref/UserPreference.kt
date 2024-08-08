@@ -24,6 +24,19 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
         }
     }
 
+    fun getProfile(): Flow<ProfileModel> {
+        return dataStore.data.map { preferences ->
+            ProfileModel(
+                preferences[PROFILE_BIRTH_DATE] ?: "",
+                preferences[PROFILE_GENDER] ?: "",
+                preferences[PROFILE_HEIGHT]?.toInt(),
+                preferences[PROFILE_WEIGHT]?.toInt(),
+                preferences[PROFILE_BMI_INDEX]?.toFloat(),
+                preferences[PROFILE_BMI_LABEL] ?: ""
+            )
+        }
+    }
+
     fun getToken(): Flow<TokenModel> {
         return dataStore.data.map { preferences ->
             TokenModel(
@@ -40,7 +53,18 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
         }
     }
 
-    suspend fun saveSession(user: UserModel) {
+    suspend fun saveProfile(profile: ProfileModel) {
+        dataStore.edit { preferences ->
+            preferences[PROFILE_BIRTH_DATE] = profile.birthDate ?: ""
+            preferences[PROFILE_GENDER] = profile.gender ?: ""
+            preferences[PROFILE_HEIGHT] = profile.height?.toString() ?: ""
+            preferences[PROFILE_WEIGHT] = profile.weight?.toString() ?: ""
+            preferences[PROFILE_BMI_INDEX] = profile.bmiIndex?.toString() ?: ""
+            preferences[PROFILE_BMI_LABEL] = profile.bmiLabel ?: ""
+        }
+    }
+
+    suspend fun saveUser(user: UserModel) {
         dataStore.edit { preferences ->
             preferences[NAME] = user.name ?: ""
             preferences[EMAIL] = user.email ?: ""
@@ -89,6 +113,13 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
         private val IS_LOGIN = booleanPreferencesKey("isLogin")
         private val ACCESS_TOKEN = stringPreferencesKey("accessToken")
         private val REFRESH_TOKEN = stringPreferencesKey("refreshToken")
+
+        private val PROFILE_BIRTH_DATE = stringPreferencesKey("profileBirthDate")
+        private val PROFILE_GENDER = stringPreferencesKey("profileGender")
+        private val PROFILE_HEIGHT = stringPreferencesKey("profileHeight")
+        private val PROFILE_WEIGHT = stringPreferencesKey("profileWeight")
+        private val PROFILE_BMI_INDEX = stringPreferencesKey("profileBMIIndex")
+        private val PROFILE_BMI_LABEL = stringPreferencesKey("profileBMILabel")
 
         fun getInstance(dataStore: DataStore<Preferences>): UserPreference {
             return INSTANCE ?: synchronized(this) {

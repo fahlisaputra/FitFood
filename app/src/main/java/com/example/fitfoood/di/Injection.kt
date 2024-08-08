@@ -9,6 +9,7 @@ import com.example.fitfoood.data.pref.dataStore2
 import com.example.fitfoood.data.repository.ArticleRepository
 import com.example.fitfoood.data.repository.AuthRepository
 import com.example.fitfoood.data.repository.BMIRepository
+import com.example.fitfoood.data.repository.ChatRepository
 import com.example.fitfoood.data.repository.InternetRepository
 import com.example.fitfoood.source.ApiConfig
 
@@ -34,6 +35,12 @@ object Injection {
     fun provideBMIRRepository(context: Context): BMIRepository {
         val pref = BMIPreference.getInstance(context.dataStore2)
         return BMIRepository.getInstance(pref)
+    }
+
+    fun provideChatRepository(context: Context): ChatRepository {
+        val pref = UserPreference.getInstance(context.dataStore)
+        val apiService = getApiService(pref)
+        return ChatRepository(apiService)
     }
 
     fun provideInternetRepository(context: Context): InternetRepository {

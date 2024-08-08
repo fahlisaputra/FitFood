@@ -2,6 +2,7 @@ package com.example.fitfoood.data.repository
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.fitfoood.data.ApiResponse
+import com.example.fitfoood.data.pref.ProfileModel
 import com.example.fitfoood.data.pref.TokenModel
 import com.example.fitfoood.data.pref.UserModel
 import com.example.fitfoood.data.pref.UserPreference
@@ -17,8 +18,12 @@ class UserRepository private constructor(
     private val apiService: ApiService
 ) {
 
-    suspend fun saveSession(user: UserModel) {
-        userPreference.saveSession(user)
+    suspend fun saveUser(user: UserModel) {
+        userPreference.saveUser(user)
+    }
+
+    suspend fun saveProfile(profile: ProfileModel) {
+        userPreference.saveProfile(profile)
     }
 
     suspend fun saveToken(token: TokenModel) {
@@ -31,6 +36,10 @@ class UserRepository private constructor(
 
     fun getUser(): Flow<UserModel> {
         return userPreference.getUser()
+    }
+
+    fun getProfile(): Flow<ProfileModel> {
+        return userPreference.getProfile()
     }
 
     fun getToken(): Flow<TokenModel> {

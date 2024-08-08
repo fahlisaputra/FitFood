@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.fitfoood.databinding.ActivityMainBinding
-import com.example.fitfoood.view.chat.ChatFragment
+import com.example.fitfoood.view.chat.ChatActivity
 import com.example.fitfoood.view.foodchecker.CameraActivity
 
 class MainActivity : AppCompatActivity() {
@@ -20,7 +20,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var homeFragment: HomeFragment
     private lateinit var profileFragment: ProfileFragment
-    private lateinit var chatFragment: ChatFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,7 +29,6 @@ class MainActivity : AppCompatActivity() {
         // Initialize fragments
         homeFragment = HomeFragment()
         profileFragment = ProfileFragment()
-        chatFragment = ChatFragment()
 
         // Add homeFragment as the default fragment
         supportFragmentManager.beginTransaction()
@@ -43,9 +41,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.chat.setOnClickListener {
-            showFragment(chatFragment)
-            binding.bottomNavigation.visibility = View.GONE
-            binding.chat.visibility = View.GONE
+            val intent = Intent(this, ChatActivity::class.java)
+            startActivity(intent)
         }
 
         binding.bottomNavigation.setOnNavigationItemSelectedListener { item ->

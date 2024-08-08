@@ -5,19 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/iv_userProfile"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/tv_userMessageText"
         style="@style/Body1_Poppins_Medium"
         android:textColor="@color/white"
         android:layout_width="wrap_content"
+        android:maxWidth="250dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:background="@drawable/rounded_rectangle_navy"
@@ -32,8 +25,8 @@
         style="@style/Body2_Poppins_Regular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginTop="5dp"
+        android:paddingBottom="8dp"
         android:text="@string/dummy_time"
         app:layout_constraintEnd_toEndOf="@+id/tv_userMessageText"
         app:layout_constraintTop_toBottomOf="@+id/tv_userMessageText" />

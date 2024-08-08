@@ -1,4 +1,4 @@
-package com.example.fitfoood.view.artikel
+package com.example.fitfoood.view.article
 
 import android.os.Bundle
 import android.util.Log
@@ -7,13 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.fitfoood.data.response.ArtikelResponseItem
+import com.example.fitfoood.adapter.ArticleListAdapter
+import com.example.fitfoood.data.response.ArticleItem
 import com.example.fitfoood.databinding.FragmentContentBinding
 
 class ContentFragment : Fragment() {
     private var _binding: FragmentContentBinding? = null
     private val binding get() = _binding!!
-    private lateinit var artikelAdapter: Artikel2Adapter
+    private lateinit var articleAdapter: ArticleListAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,12 +27,12 @@ class ContentFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val articles = arguments?.getParcelableArrayList<ArtikelResponseItem>("articles") ?: listOf()
-        artikelAdapter = Artikel2Adapter(articles)
+        val articles = arguments?.getParcelableArrayList<ArticleItem>("articles") ?: listOf()
+        articleAdapter = ArticleListAdapter(articles)
 
         binding.recyclerView2.apply {
             layoutManager = LinearLayoutManager(context)
-            adapter = artikelAdapter
+            adapter = articleAdapter
         }
     }
 
@@ -42,7 +43,7 @@ class ContentFragment : Fragment() {
 
     companion object {
         @JvmStatic
-        fun newInstance(articles: List<ArtikelResponseItem>) = ContentFragment().apply {
+        fun newInstance(articles: List<ArticleItem>) = ContentFragment().apply {
             arguments = Bundle().apply {
                 putParcelableArrayList("articles", ArrayList(articles))
             }

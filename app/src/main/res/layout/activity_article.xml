@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F1F6F7"
-    tools:context=".view.artikel.ArtikelActivity">
+    tools:context=".view.article.ArticleActivity">
 
     <TextView
         android:id="@+id/textView3"
@@ -59,7 +59,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/searchView"
         tools:ignore="MissingConstraints"
-        tools:listitem="@layout/artikel_row" />
+        tools:listitem="@layout/article_row_card" />
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"

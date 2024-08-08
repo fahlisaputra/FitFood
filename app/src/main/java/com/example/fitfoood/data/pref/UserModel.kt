@@ -1,5 +1,7 @@
 package com.example.fitfoood.data.pref
 
+import com.google.gson.annotations.SerializedName
+
 /**
  * User model
  *

@@ -7,6 +7,7 @@ import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.fitfoood.data.ApiResponse
 import com.example.fitfoood.data.pref.BMIModel
+import com.example.fitfoood.data.pref.ProfileModel
 import com.example.fitfoood.data.pref.UserModel
 import com.example.fitfoood.data.repository.ArticleRepository
 import com.example.fitfoood.data.repository.BMIRepository
@@ -21,40 +22,23 @@ import com.example.fitfoood.data.response.WoBMIResponseItem
 import kotlinx.coroutines.launch
 
 class HomeViewModel(private val articleRepository: ArticleRepository, private val userRepository: UserRepository, private val bmiRepository: BMIRepository) : ViewModel() {
-//    fun getAllArticles(token: String): LiveData<ApiResponse<List<ArtikelResponseItem>>> {
-//        return repository.getAllArticle(token)
-//    }
-
-//    fun getSession(): LiveData<UserModel> {
-//        return userRepository.getSession().asLiveData()
-//    }
 
     fun getUser(): LiveData<UserModel> {
         return userRepository.getUser().asLiveData()
+    }
+
+    fun getProfile(): LiveData<ProfileModel> {
+        return userRepository.getProfile().asLiveData()
     }
 
     fun getArticles(): LiveData<ApiResponse<ArticleResponse>> {
         return articleRepository.getArticles()
     }
 
-//    fun getBMI(token: String, idhealth: String): LiveData<ApiResponse<GetBMIResponse>> {
-//        return repository.getBMI(token, idhealth)
-//    }
-//
 //    fun postBMI(token: String, idhealth: String, bmi: BMI): LiveData<ApiResponse<PostBMIResponse>> {
 //        return repository.postBMI(token, idhealth, bmi)
 //    }
-//
-//    fun saveSessionBMI(bmiModel: BMIModel) {
-//        viewModelScope.launch {
-//            bmiRepository.saveSessionBMI(bmiModel)
-//        }
-//    }
-//    fun getSessionBMI(): LiveData<BMIModel> {
-//        return bmiRepository.getSessionBMI().asLiveData()
-//    }
-//
-//
+
 //    fun getFoodRec(token: String): LiveData<ApiResponse<List<FoodBMIResponseItem>>> {
 //        return repository.getFoodRec(token)
 //    }

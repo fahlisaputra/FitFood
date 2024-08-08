@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 class SignUpViewModel(private val userRepository: UserRepository, private val authRepository: AuthRepository) : ViewModel() {
     fun saveSession(user: UserModel) {
         viewModelScope.launch {
-            userRepository.saveSession(user)
+            userRepository.saveUser(user)
         }
     }
     fun signUp(payload: SignUpRequestData) = authRepository.signUp(payload)
