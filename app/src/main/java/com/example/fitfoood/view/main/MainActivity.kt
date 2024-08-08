@@ -5,15 +5,21 @@ import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
+import android.view.MotionEvent
 import android.view.View
+import android.view.ViewGroup.MarginLayoutParams
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.example.fitfoood.components.MovableFloatingActionButton
 import com.example.fitfoood.databinding.ActivityMainBinding
 import com.example.fitfoood.view.chat.ChatActivity
 import com.example.fitfoood.view.foodchecker.CameraActivity
+import kotlin.math.abs
+import kotlin.math.max
+import kotlin.math.min
 
 class MainActivity : AppCompatActivity() {
 
@@ -34,7 +40,6 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction()
             .add(R.id.fragment_container, homeFragment, "HomeFragment")
             .add(R.id.fragment_container, profileFragment, "ProfileFragment")
-            .hide(profileFragment)  // Hide profileFragment initially
             .commit()
 
         supportFragmentManager.addOnBackStackChangedListener {
@@ -81,6 +86,7 @@ class MainActivity : AppCompatActivity() {
 
 
 //        requestExactAlarmPermission()
+
     }
 
     override fun onResume() {
