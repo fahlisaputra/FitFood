@@ -2,7 +2,7 @@
 
 # FitFood
 [![Android CI](https://github.com/fahlisaputra/FitFood/actions/workflows/android-build.yml/badge.svg?branch=main)](https://github.com/fahlisaputra/FitFood/actions/workflows/android-build.yml)
-![GitHub License](https://img.shields.io/github/license/fahlisaputra/FitFood)
+![GitHub License](https://img.shields.io/github/license/fahlisaputra/FitFood?v=2)
 ![Static Badge](https://img.shields.io/badge/Language-Kotlin-magenta)
 
 
