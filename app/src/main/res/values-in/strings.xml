@@ -189,4 +189,6 @@
     <string name="dummy_time">12.50 PM</string>
 
     <string name="bmi_index_label">BMI : %1$s</string>
+    <string name="send_message_text">Kirim</string>
+    <string name="today">Hari ini</string>
 </resources>
