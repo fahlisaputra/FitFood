@@ -44,13 +44,18 @@ class HomeFragment : Fragment() {
 
         viewModel.getUser().observe(viewLifecycleOwner) { user ->
             val username = user.name?.split(" ")?.firstOrNull() ?: user.name
-            binding.tvItem.text = "Hai, $username"
+            binding.tvItem.text = context?.getString(R.string.greeting, username)
         }
 
         viewModel.getProfile().observe(viewLifecycleOwner) { profile ->
             label = profile.bmiLabel ?: "ideal"
             val labelUp = label.uppercase()
             binding.textViewBMICard.text = labelUp
+
+            var bmiIndex = profile.bmiIndex ?: 0.0
+            bmiIndex = String.format("%.2f", bmiIndex)
+            binding.textViewBMI.text =
+                context?.let { String.format(it.getString(R.string.bmi_index_label), bmiIndex) }
 
             showRecyclerList()
         }

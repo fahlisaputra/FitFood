@@ -4,16 +4,28 @@ import ProfileFragment
 import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Color
+import android.os.Build
 import android.os.Bundle
+import android.view.MotionEvent
 import android.view.View
+import android.view.View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+import android.view.View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+import android.view.ViewGroup.MarginLayoutParams
+import android.view.WindowManager
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.core.view.WindowCompat
 import androidx.fragment.app.Fragment
+import com.example.fitfoood.components.MovableFloatingActionButton
 import com.example.fitfoood.databinding.ActivityMainBinding
 import com.example.fitfoood.view.chat.ChatActivity
 import com.example.fitfoood.view.foodchecker.CameraActivity
+import kotlin.math.abs
+import kotlin.math.max
+import kotlin.math.min
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,6 +37,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        WindowCompat.setDecorFitsSystemWindows(window, false);
+
 
         // Initialize fragments
         homeFragment = HomeFragment()
@@ -34,7 +48,6 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction()
             .add(R.id.fragment_container, homeFragment, "HomeFragment")
             .add(R.id.fragment_container, profileFragment, "ProfileFragment")
-            .hide(profileFragment)  // Hide profileFragment initially
             .commit()
 
         supportFragmentManager.addOnBackStackChangedListener {
@@ -79,8 +92,8 @@ class MainActivity : AppCompatActivity() {
         // Set default selection
         binding.bottomNavigation.selectedItemId = R.id.navigation_home
 
-
 //        requestExactAlarmPermission()
+
     }
 
     override fun onResume() {
@@ -98,13 +111,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun updateIcons(selectedItemId: Int) {
         binding.bottomNavigation.menu.findItem(R.id.navigation_home)?.setIcon(
-            if (selectedItemId == R.id.navigation_home) R.drawable.ic_home_click else R.drawable.ic_home
+            if (selectedItemId == R.id.navigation_home) R.drawable.ic_round_home_active else R.drawable.ic_round_home_normal
         )
         binding.bottomNavigation.menu.findItem(R.id.navigation_analysis)?.setIcon(
-            if (selectedItemId == R.id.navigation_analysis) R.drawable.ic_camera_click else R.drawable.ic_camera
+            if (selectedItemId == R.id.navigation_analysis) R.drawable.ic_camera_click else R.drawable.ic_round_camera_normal
         )
         binding.bottomNavigation.menu.findItem(R.id.navigation_profile)?.setIcon(
-            if (selectedItemId == R.id.navigation_profile) R.drawable.ic_profile_click else R.drawable.ic_profile
+            if (selectedItemId == R.id.navigation_profile) R.drawable.ic_round_profile_active else R.drawable.ic_round_profile_normal
         )
     }
 
